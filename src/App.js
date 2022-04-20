@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Form from "./components/Form"
 import Resume from "./components/Resume";
-import './App.css';
+import './index.css';
 
 function App() {
 
@@ -81,8 +81,10 @@ function updateProjects(event){ //updates values for Projects
           updateProjects={updateProjects}
         />
       </div>
-      <div className="result">
-        <Resume />
+      <div className="resume">
+        <Resume 
+          values={values}
+        />
       </div>
       
     </div>
