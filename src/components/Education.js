@@ -9,7 +9,7 @@ export default function Education(props){
     return(
         
         <React.Fragment>
-            
+            <h1>Education</h1>
             <TextField
                 required
                 id="outlined-required"
@@ -47,7 +47,7 @@ export default function Education(props){
                 required
                 id="outlined-required"
                 label="School Location"
-                
+
                 name="schoolLocation"
                 value={props.values.schoolLocation}
                 onChange={(event) => props.updateValues(event)}

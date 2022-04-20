@@ -8,12 +8,13 @@ export default function PersonalDetails(props){
     return(
         
         <React.Fragment>
+            <h1>Personal Details</h1>
             
             <TextField
                 required
                 id="outlined-required"
                 label="First Name"
-                
+
                 name="firstName"
                 value={props.values.firstName}
                 onChange={(event) => props.updateValues(event)}
