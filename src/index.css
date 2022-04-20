@@ -23,11 +23,13 @@ code {
 
 .form{
   /* float: left;  */
-  width: 50%
+  width: 50%;
+  height: 100;
 }
 
 .resume{
   border: black 1px solid;
   /* float: right;  */
-  width: 50%
+  width: 50%;
+  height: 730px;
 }
