@@ -1,4 +1,5 @@
 import React from "react";
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -58,11 +59,13 @@ export default function Education(props){
                 variant="outlined"
                 color="secondary"
                 startIcon={<ArrowLeftIcon />}
+
                 onClick={() => props.lastStep()}
             >Back</Button>
             <Button
                 variant="contained"
                 endIcon={<ArrowRightIcon />}
+                
                 onClick={() => props.nextStep()}
             >Next</Button>
         </React.Fragment>

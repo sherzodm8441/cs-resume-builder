@@ -1,4 +1,5 @@
 import React from "react";
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -66,6 +67,7 @@ export default function PersonalDetails(props){
             <Button
                 variant="contained"
                 endIcon={<ArrowRightIcon />}
+                
                 onClick={() => props.nextStep()}
             >Next</Button>
         </React.Fragment>

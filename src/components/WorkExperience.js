@@ -1,4 +1,6 @@
 import React from "react";
+
+//Material UI components
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -11,13 +13,13 @@ export default function WorkExperience(props){
         <React.Fragment>
             <h1>Work Experience</h1>
             <TextField
-                required
-                id="outlined-required"
-                label="Work Place"
+                required //material UI provided specifications
+                id="outlined-required" //mui
+                label="Work Place" //mui
 
-                name="workPlace1"
-                value={props.workExp.workPlace1}
-                onChange={(event) => props.updateWorkExp(event)}
+                name="workPlace1" //JSX specification (rest of the components follow the same pattern)
+                value={props.workExp.workPlace1} //JSX
+                onChange={(event) => props.updateWorkExp(event)} //JSX
             />
             
             <TextField
@@ -140,11 +142,13 @@ export default function WorkExperience(props){
                 variant="outlined"
                 color="secondary"
                 startIcon={<ArrowLeftIcon />}
+
                 onClick={() => props.lastStep()}
             >Back</Button>
             <Button
                 variant="contained"
                 endIcon={<ArrowRightIcon />}
+
                 onClick={() => props.nextStep()}
             >Next</Button>
         </React.Fragment>
