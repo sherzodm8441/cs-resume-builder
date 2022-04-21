@@ -16,7 +16,9 @@ function App() {
     schoolName : "",
     schoolLocation : "",
     courses : "",
-    graduation : ""
+    graduation : "",
+    degree : "",
+    major : ""
 })
 
 const [workExp, setWorkExp] = useState({ //holds values for Work Experience (# of workExp are fixed)
@@ -84,6 +86,8 @@ function updateProjects(event){ //updates values for Projects
       <div className="resume">
         <Resume 
           values={values}
+          workExp={workExp}
+          projects={projects}
         />
       </div>
       
