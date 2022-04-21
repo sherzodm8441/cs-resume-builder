@@ -25,17 +25,6 @@ export default function Education(props){
             <TextField
                 required
                 id="outlined-required"
-                label="Courses"
-
-                name="courses"
-                value={props.values.courses}
-                onChange={(event) => props.updateValues(event)}
-            />
-            <br/>
-            <br/>
-            <TextField
-                required
-                id="outlined-required"
                 label="Graduation date"
 
                 name="graduation"
@@ -51,6 +40,39 @@ export default function Education(props){
 
                 name="schoolLocation"
                 value={props.values.schoolLocation}
+                onChange={(event) => props.updateValues(event)}
+            />
+            <br/>
+            <br/>
+            <TextField
+                required
+                id="outlined-required"
+                label="Degree"
+
+                name="degree"
+                value={props.values.degree}
+                onChange={(event) => props.updateValues(event)}
+            />
+            <br/>
+            <br/>
+            <TextField
+                required
+                id="outlined-required"
+                label="Major"
+
+                name="major"
+                value={props.values.major}
+                onChange={(event) => props.updateValues(event)}
+            />
+            <br/>
+            <br/>
+            <TextField
+                required
+                id="outlined-required"
+                label="Courses"
+
+                name="courses"
+                value={props.values.courses}
                 onChange={(event) => props.updateValues(event)}
             />
             <br/>
