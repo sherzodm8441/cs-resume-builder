@@ -3,7 +3,7 @@ import React from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import Logo from '/Users/bryantbardales/Desktop/GitHub/cs-resume-builder/src/images/logo.png'
+import Logo from '../images/logo.png'
 
 /* Controls the width of the text input boxes */
 const txtBox = {
