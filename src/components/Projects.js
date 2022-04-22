@@ -4,14 +4,34 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 // import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import Logo from '/Users/bryantbardales/Desktop/GitHub/cs-resume-builder/src/images/logo.png'
+
+/* Controls the width of the text input boxes */
+const txtBox = {
+    width: "70%", 
+}
+
+/* Controls the placement of the back button on the page */
+const bckBtn = {
+    float: "left",
+    marginLeft: "100px",
+    marginTop: "100px"
+}
 
 
 export default function Projects(props){
     return(
         
         <React.Fragment>
+
+            <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
+              <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
+                    </img></a>
+                    Resume Builder
+            </header>
+
             <h1>Projects</h1>
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Title"
@@ -21,7 +41,7 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Link"
@@ -41,7 +61,7 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Description"
@@ -53,7 +73,7 @@ export default function Projects(props){
             />
             <br/>
             <br/>
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Title"
@@ -63,7 +83,7 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Link"
@@ -83,7 +103,7 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Description"
@@ -95,7 +115,7 @@ export default function Projects(props){
             />
             <br/>
             <br/>
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Title"
@@ -105,7 +125,7 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Link"
@@ -125,7 +145,7 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Description"
@@ -137,7 +157,7 @@ export default function Projects(props){
             />
             <br/>
             <br/>
-            <Button
+            <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"
                 startIcon={<ArrowLeftIcon />}

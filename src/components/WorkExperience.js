@@ -5,14 +5,42 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import Logo from '/Users/bryantbardales/Desktop/GitHub/cs-resume-builder/src/images/logo.png'
+
+/* Controls the width of the text input boxes */
+const txtBox = {
+    width: "70%", 
+}
+
+/* Controls the color of the next button as well as placement on the page */
+const nxtBtn = { 
+    backgroundColor: "#2db300", 
+    float: "right",
+    marginRight: "100px",
+    marginTop: "100px"
+}
+
+/* Controls the placement of the back button on the page */
+const bckBtn = {
+    float: "left",
+    marginLeft: "100px",
+    marginTop: "100px"
+}
 
 
 export default function WorkExperience(props){
     return(
         
         <React.Fragment>
+
+            <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
+              <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
+                    </img></a>
+                    Resume Builder
+            </header>
+
             <h1>Work Experience</h1>
-            <TextField
+            <TextField style = {txtBox}
                 required //material UI provided specifications
                 id="outlined-required" //mui
                 label="Work Place" //mui
@@ -22,7 +50,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)} //JSX
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Position"
@@ -32,7 +60,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Start - End"
@@ -42,7 +70,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Responsibilies"
@@ -54,7 +82,7 @@ export default function WorkExperience(props){
             />
             <br/>
             <br/>
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Work Place"
@@ -64,7 +92,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Position"
@@ -74,7 +102,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Start - End"
@@ -84,7 +112,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Responsibilies"
@@ -96,7 +124,7 @@ export default function WorkExperience(props){
             />
             <br/>
             <br/>
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Work Place"
@@ -106,7 +134,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Position"
@@ -116,7 +144,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Start - End"
@@ -126,7 +154,7 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField
+            <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Responsibilies"
@@ -138,14 +166,14 @@ export default function WorkExperience(props){
             />
             <br/>
             <br/>
-            <Button
+            <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"
                 startIcon={<ArrowLeftIcon />}
 
                 onClick={() => props.lastStep()}
             >Back</Button>
-            <Button
+            <Button  style = {nxtBtn}
                 variant="contained"
                 endIcon={<ArrowRightIcon />}
 
