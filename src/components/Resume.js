@@ -7,13 +7,13 @@ export default function Resume(props){
     <div className="resumeDetails">
         <div className="header">
             <div className="fullName">
-                <h1>{props.values.firstName}</h1>
-                <h1>{props.values.lastName}</h1>
+                <h1>{props.values.firstName} {props.values.lastName}</h1>
             </div>
             <div className="personalDetails">
                 <h3>{props.values.email}</h3>
-                <h3>{props.values.portfolioLink}</h3>
+                <h3>{props.values.phone}</h3>
                 <h3>{props.values.location}</h3>
+                <h3>{props.values.portfolioLink}</h3>
             </div>
         </div>
         {props.values.firstName && <div className="firstLine"></div>}

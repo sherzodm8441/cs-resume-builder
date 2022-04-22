@@ -28,10 +28,11 @@ code {
 }
 
 .resume{
-  border: black 1px solid;
+  border: lightgrey 1px groove;
   /* float: right;  */
+  background-color: lightgray;
   width: 45%;
-  height: 730px;
+  height: 1230px;
 }
 
 .header{
@@ -133,3 +134,4 @@ h2{
 #description{
   float:right;
 }
+
