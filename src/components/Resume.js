@@ -5,7 +5,7 @@ export default function Resume(props){
 
     return(
     <div>
-        <h1>{props.values.firstName}{props.values.lastName}</h1>
+        <h1>{props.values.firstName}</h1>
     </div>
     )
 }
