@@ -31,7 +31,9 @@ code {
   border: lightgrey 1px groove;
   /* float: right;  */
   background-color: lightgray;
-  width: 45%;
+  /* width: 45%; */
+  /* width needs to be at 100% for it to take up the entire width of the page when donloading */
+  width: 100%;
   height: 1230px;
 }
 
