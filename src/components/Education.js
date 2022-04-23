@@ -74,7 +74,7 @@ export default function Education(props){
             />
             <br/>
             <br/>
-            <TextField style = {txtBox}
+            {/* <TextField style = {txtBox}
                 required
                 id="outlined-required"
                 label="Degree"
@@ -82,7 +82,18 @@ export default function Education(props){
                 name="degree"
                 value={props.values.degree}
                 onChange={(event) => props.updateValues(event)}
-            />
+            /> */}
+            <div>
+                <form>
+                    <select name="degree" value={props.values.degree} className="dropdown" onChange={(event) => props.updateValues(event)}>
+                        <option value="">Select degree</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Associate">Associate</option>
+                        <option value="Master's">Master's</option>
+                        <option value="High School Diploma">High School</option>
+                    </select>
+                </form>
+            </div>
             <br/>
             <br/>
             <TextField style = {txtBox}
@@ -120,6 +131,8 @@ export default function Education(props){
                 
                 onClick={() => props.nextStep()}
             >Next</Button>
+
+            
         </React.Fragment>
 
     );
