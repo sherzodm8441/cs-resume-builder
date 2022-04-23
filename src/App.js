@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Form from "./components/Form"
 import Resume from "./components/Resume";
 import './index.css';
+import { useReactToPrint } from "react-to-print";
+import Button from '@mui/material/Button';
 
 function App() {
 
@@ -71,6 +73,11 @@ function updateProjects(event){ //updates values for Projects
     })
 }
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <div className="App">
       <div className="form">
@@ -82,15 +89,21 @@ function updateProjects(event){ //updates values for Projects
           updateWorkExp={updateWorkExp}
           updateProjects={updateProjects}
         />
+        <Button  
+          variant="contained"
+          // endIcon={<ArrowRightIcon />}
+          
+          onClick={handlePrint}
+      >Download</Button>
       </div>
-      <div className="resume">
+      <div ref={componentRef} className="resume">
         <Resume 
           values={values}
           workExp={workExp}
           projects={projects}
+          
         />
       </div>
-      
     </div>
   );
 }
