@@ -168,7 +168,7 @@ export default function PersonalDetails(props){
             />
             <br/>
             <br/>
-            {props.values.firstName && props.values.lastName?<Button style = {nxtBtn}
+            {props.values.firstName && props.values.lastName && props.values.email && props.values.location?<Button style = {nxtBtn}
                 variant="contained"
                 endIcon={<ArrowRightIcon />}
                 
