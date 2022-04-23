@@ -30,6 +30,7 @@ const bckBtn = {
 
 
 export default function WorkExperience(props){
+    //this array contains the text inside the mouse popover. 
     const responsibilitiesTip = [<b>Points to consider:</b>, 
     <br/>,  
     'Growth: What did you add to the company?',

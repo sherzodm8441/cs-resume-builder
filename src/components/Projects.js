@@ -22,6 +22,7 @@ const bckBtn = {
 
 
 export default function Projects(props){
+    //this array contains the text inside the mouse popover. 
     const projectsTip = [<b>Points to consider:</b>, 
     <br/>,  
     'Be intentional about the projects you highlight',
