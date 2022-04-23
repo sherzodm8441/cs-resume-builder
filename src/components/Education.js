@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
+import MouseOverPopover from './MouseOverPopover'
 
 const txtBox = {
     width: "70%", /* Controls the width of the text input boxes */
@@ -94,6 +95,7 @@ export default function Education(props){
                     </select>
                 </form>
             </div>
+            <MouseOverPopover style={{width: "20px", float: 'right'}} text={"Choose 'Select Degree' if N/A"}/>
             <br/>
             <br/>
             <TextField style = {txtBox}
