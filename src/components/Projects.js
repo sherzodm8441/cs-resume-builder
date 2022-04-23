@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 // import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
+import MouseOverPopover from './MouseOverPopover'
+
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -20,6 +22,22 @@ const bckBtn = {
 
 
 export default function Projects(props){
+    const projectsTip = [<b>Points to consider:</b>, 
+    <br/>,  
+    'Be intentional about the projects you highlight',
+    <br/>,
+    'Projects should ', <b>ALWAYS</b>, ' demonstrate your strengths,', 
+    <br/>, 
+    'interests, and/or an ability to provide solutions to problems',
+    <br/>,
+    'What should your project description contain?',
+    <br/>,
+    <ul>
+        <li>Links - source code and live site/app</li>
+        <li>What problem does it solve?</li>
+        <li>Which technologies did you use?</li>
+        <li>What are some of the features?<br/>Describe the specific contributions you made.</li>
+    </ul>]
     return(
         
         <React.Fragment>
@@ -71,6 +89,7 @@ export default function Projects(props){
                 value={props.projects.description1}
                 onChange={(event) => props.updateProjects(event)}
             />
+            <MouseOverPopover style={{width: "20px", float: 'right'}} text={projectsTip}/>
             <br/>
             <br/>
             <TextField style = {txtBox}
