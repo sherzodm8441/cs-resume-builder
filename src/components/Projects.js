@@ -24,13 +24,31 @@ export default function Projects(props){
         
         <React.Fragment>
 
+            {/* Project title with logo located in header */}
             <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
               <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
                     </img></a>
                     Resume Builder
             </header>
 
-            <h1>Projects</h1>
+
+            {/* "Projects" title at the top of page with CSS */}
+            <h1 style={
+                {textAlign: 'left',
+                marginTop: "50px", 
+                marginLeft: "125px", 
+                marginBottom: "50px",
+                }
+                }>Projects</h1>
+
+            <h3 
+                style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Project 1
+                </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -41,6 +59,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Link 
+                </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -61,6 +87,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Description
+                </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -73,6 +107,15 @@ export default function Projects(props){
             />
             <br/>
             <br/>
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Project 2
+                </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"

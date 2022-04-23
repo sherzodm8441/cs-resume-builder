@@ -36,7 +36,7 @@ export default function PersonalDetails(props){
             <h1  
             style={
                 {textAlign: 'left',
-                marginTop: "100px", 
+                marginTop: "50px", 
                 marginLeft: "125px", 
                 marginBottom: "50px",
                 }
