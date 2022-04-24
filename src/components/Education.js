@@ -38,6 +38,7 @@ export default function Education(props){
                     Resume Builder 
             </header>
 
+
             {/* Education title at the top of page */}
             <h1 style={
                 {textAlign: 'left',
@@ -110,7 +111,7 @@ export default function Education(props){
             {/* <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Degree"
+                placeholder="Please enter the degree earned"
 
                 name="degree"
                 value={props.values.degree}
@@ -170,6 +171,8 @@ export default function Education(props){
             />
             <br/>
             <br/>
+
+
             <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"

@@ -13,6 +13,10 @@ const txtBox = {
     width: "70%", 
 }
 
+const descTxtBox = {
+    width: "70%",
+}
+
 /* Controls the color of the next button as well as placement on the page */
 const nxtBtn = { 
     backgroundColor: "#2db300", 
@@ -45,6 +49,7 @@ export default function WorkExperience(props){
         
         <React.Fragment>
 
+            {/* Project title with logo located in header */}
             <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
               <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
                     </img></a>
@@ -288,6 +293,8 @@ export default function WorkExperience(props){
             />
             <br/>
             <br/>
+
+
             <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"

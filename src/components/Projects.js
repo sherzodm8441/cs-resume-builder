@@ -43,6 +43,7 @@ export default function Projects(props){
         
         <React.Fragment>
 
+            {/* Project title with logo located in header */}
             <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
               <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
                     </img></a>
