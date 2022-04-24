@@ -6,7 +6,11 @@ import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
 
 export default function Form(props){
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(parseInt(localStorage.getItem('step')) || 1);
+
+    React.useEffect(() => { // store step in localStorage
+        localStorage.setItem('step', JSON.stringify(step))
+      }, [step])
 
     function nextStep(){ //increment step value (go to next page)
         setStep(step + 1);
