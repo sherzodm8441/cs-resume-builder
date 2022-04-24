@@ -3,7 +3,8 @@ import React from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import Logo from '/Users/bryantbardales/Desktop/GitHub/cs-resume-builder/src/images/logo.png'
+import Logo from '../images/logo.png'
+import MouseOverPopover from "./MouseOverPopover";
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -31,6 +32,7 @@ export default function PersonalDetails(props){
                     Resume Builder
             </header>
 
+            
 
             {/* "Personal Details" title at the top of page with CSS */}
             <h1  
@@ -64,6 +66,7 @@ export default function PersonalDetails(props){
                 onChange={(event) => props.updateValues(event)}
                 required={true}
             />
+            
             <TextField style = {txtBox}
                 
                 id="outlined-required"
@@ -140,6 +143,7 @@ export default function PersonalDetails(props){
                 onChange={(event) => props.updateValues(event)}
                 required={true}
             />
+            <MouseOverPopover style={{width: "20px", float: 'right'}} text={'ex. Brooklyn, NY'}/>
             <br/>
             <br/>
 
@@ -164,12 +168,20 @@ export default function PersonalDetails(props){
             />
             <br/>
             <br/>
-            <Button style = {nxtBtn}
+            {props.values.firstName && props.values.lastName && props.values.email && props.values.location?<Button style = {nxtBtn}
                 variant="contained"
                 endIcon={<ArrowRightIcon />}
                 
                 onClick={() => props.nextStep()}
             >Next step</Button>
+            :
+            <Button style = {nxtBtn}
+                variant="contained"
+                endIcon={<ArrowRightIcon />}
+                disabled
+                
+                onClick={() => props.nextStep()}
+            >Next step</Button>}
         </React.Fragment>
 
     );

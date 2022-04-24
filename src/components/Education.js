@@ -4,7 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import Logo from '/Users/bryantbardales/Desktop/GitHub/cs-resume-builder/src/images/logo.png'
+import Logo from '../images/logo.png'
+import MouseOverPopover from './MouseOverPopover'
 
 const txtBox = {
     width: "70%", /* Controls the width of the text input boxes */
@@ -106,6 +107,7 @@ export default function Education(props){
             />
             <br/>
             <br/>
+<<<<<<< HEAD
 
             <h3 style={
                 {textAlign: 'left', 
@@ -115,6 +117,9 @@ export default function Education(props){
             
             }>Degree</h3>
             <TextField style = {txtBox}
+=======
+            {/* <TextField style = {txtBox}
+>>>>>>> origin
                 required
                 id="outlined-required"
                 placeholder="Please enter the degree earned"
@@ -122,7 +127,19 @@ export default function Education(props){
                 name="degree"
                 value={props.values.degree}
                 onChange={(event) => props.updateValues(event)}
-            />
+            /> */}
+            <div>
+                <form>
+                    <select name="degree" value={props.values.degree} className="dropdown" onChange={(event) => props.updateValues(event)}>
+                        <option value="">Select degree</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Associate">Associate</option>
+                        <option value="Master's">Master's</option>
+                        <option value="High School Diploma">High School</option>
+                    </select>
+                </form>
+            </div>
+            <MouseOverPopover style={{width: "20px", float: 'right'}} text={"Choose 'Select Degree' if N/A"}/>
             <br/>
             <br/>
 
@@ -177,7 +194,13 @@ export default function Education(props){
                 endIcon={<ArrowRightIcon />}
                 
                 onClick={() => props.nextStep()}
+<<<<<<< HEAD
             >Next step</Button>
+=======
+            >Next</Button>
+
+            
+>>>>>>> origin
         </React.Fragment>
 
     );

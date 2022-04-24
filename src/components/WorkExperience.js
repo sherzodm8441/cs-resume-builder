@@ -5,7 +5,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import Logo from '/Users/bryantbardales/Desktop/GitHub/cs-resume-builder/src/images/logo.png'
+import Logo from '../images/logo.png'
+import MouseOverPopover from './MouseOverPopover'
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -33,6 +34,17 @@ const bckBtn = {
 
 
 export default function WorkExperience(props){
+    //this array contains the text inside the mouse popover. 
+    const responsibilitiesTip = [<b>Points to consider:</b>, 
+    <br/>,  
+    'Growth: What did you add to the company?',
+    <br/>,
+    'Frequency : How often did you complete tasks?',
+    <br/>,
+    'Impact: How many people did your work help?',
+    <br/>,
+    'Reduction: How did you create efficiency by helping reduce or save XX?']
+
     return(
         
         <React.Fragment>
@@ -128,6 +140,7 @@ export default function WorkExperience(props){
                 value={props.workExp.responsibilities1}
                 onChange={(event) => props.updateWorkExp(event)}
             />
+            <MouseOverPopover style={{width: "20px", float: 'right'}} text={responsibilitiesTip}/>
             <br/>
             <br/>
 
