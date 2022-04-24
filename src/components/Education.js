@@ -108,15 +108,6 @@ export default function Education(props){
             />
             <br/>
             <br/>
-            {/* <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                placeholder="Please enter the degree earned"
-
-                name="degree"
-                value={props.values.degree}
-                onChange={(event) => props.updateValues(event)}
-            /> */}
             <div>
                 <form>
                     <select name="degree" value={props.values.degree} className="dropdown" onChange={(event) => props.updateValues(event)}>

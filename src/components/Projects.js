@@ -2,10 +2,11 @@ import React from "react";
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-// import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
+import DownloadIcon from '@mui/icons-material/Download';
 
 
 /* Controls the width of the text input boxes */
@@ -17,6 +18,13 @@ const txtBox = {
 const bckBtn = {
     float: "left",
     marginLeft: "100px",
+    marginTop: "100px"
+}
+
+/* Controls the placement of the download button on the page */
+const downloadBtn = {
+    float: "right",
+    marginRight: "100px",
     marginTop: "100px"
 }
 
@@ -94,16 +102,6 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
-            {/* <TextField
-                required
-                id="outlined-required"
-                label="Start - End"
-
-                name="description"
-                value={props.workExp.startEnd1}
-                onChange={(event) => props.updateWorkExp(event)}
-            /> */}
-            
             <h3 
             style={
                 {textAlign: 'left', 
@@ -163,17 +161,7 @@ export default function Projects(props){
                 value={props.projects.link2}
                 onChange={(event) => props.updateProjects(event)}
             />
-            
-            {/* <TextField
-                required
-                id="outlined-required"
-                label="Start - End"
 
-                name="startEnd2"
-                value={props.workExp.startEnd2}
-                onChange={(event) => props.updateWorkExp(event)}
-            /> */}
-            
             <h3 
             style={
                 {textAlign: 'left', 
@@ -232,15 +220,6 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
-            {/* <TextField
-                required
-                id="outlined-required"
-                label="Start - End"
-
-                name="startEnd3"
-                value={props.workExp.startEnd3}
-                onChange={(event) => props.updateWorkExp(event)}
-            /> */}
             
 
             <h3 
@@ -270,11 +249,11 @@ export default function Projects(props){
                 
                 onClick={() => props.lastStep()}
             >Back</Button>
-            {/* <Button
+            <Button style = {downloadBtn}
                 variant="contained"
-                endIcon={<ArrowRightIcon />}
-                onClick={() => props.nextStep()}
-            >Next</Button> */}
+                endIcon={<DownloadIcon />}
+                onClick={() => props.handleDownload()}
+            >Download</Button>
         </React.Fragment>
 
     );
