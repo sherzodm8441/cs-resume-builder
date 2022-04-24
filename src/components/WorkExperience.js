@@ -13,6 +13,10 @@ const txtBox = {
     width: "70%", 
 }
 
+const descTxtBox = {
+    width: "70%",
+}
+
 /* Controls the color of the next button as well as placement on the page */
 const nxtBtn = { 
     backgroundColor: "#2db300", 
@@ -45,47 +49,91 @@ export default function WorkExperience(props){
         
         <React.Fragment>
 
+            {/* Project title with logo located in header */}
             <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
               <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
                     </img></a>
                     Resume Builder
             </header>
 
-            <h1>Work Experience</h1>
+            <h1 style={
+                {textAlign: 'left',
+                marginTop: "50px", 
+                marginLeft: "125px", 
+                marginBottom: "50px",
+                }
+                }>Work Experience</h1>
+
+            
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Workplace 1
+                </h3>
             <TextField style = {txtBox}
                 required //material UI provided specifications
                 id="outlined-required" //mui
-                label="Work Place" //mui
+                placeholder="Please enter the first work place" //mui
 
                 name="workPlace1" //JSX specification (rest of the components follow the same pattern)
                 value={props.workExp.workPlace1} //JSX
                 onChange={(event) => props.updateWorkExp(event)} //JSX
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Position 1
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Position"
+                placeholder="Please enter the first position"
 
                 name="position1"
                 value={props.workExp.position1}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Start Date - End Date
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Start - End"
+                placeholder="Please enter the start date and end date"
 
                 name="startEnd1"
                 value={props.workExp.startEnd1}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <TextField style = {txtBox}
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Responsibilities
+            </h3>
+            <TextField style = {descTxtBox}
                 required
                 id="outlined-required"
-                label="Responsibilies"
+                placeholder="Please enter the responsibilities description"
                 multiline
 
                 name="responsibilities1"
@@ -95,40 +143,77 @@ export default function WorkExperience(props){
             <MouseOverPopover style={{width: "20px", float: 'right'}} text={responsibilitiesTip}/>
             <br/>
             <br/>
+
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Workplace 2
+                </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Work Place"
+                placeholder="Please enter the second work place"
 
                 name="workPlace2"
                 value={props.workExp.workPlace2}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Position 2
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Position"
+                placeholder="Please enter the second position"
 
                 name="position2"
                 value={props.workExp.position2}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Start Date - End Date
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Start - End"
+                placeholder="Please enter the start date and end date"
 
                 name="startEnd2"
                 value={props.workExp.startEnd2}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Responsibilities
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Responsibilies"
+                placeholder="Please enter the responsibilities description"
                 multiline
 
                 name="responsibilities2"
@@ -137,40 +222,77 @@ export default function WorkExperience(props){
             />
             <br/>
             <br/>
+
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Workplace 3
+                </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Work Place"
+                placeholder="Please enter the third work place"
 
                 name="workPlace3"
                 value={props.workExp.workPlace3}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+            
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Position 3
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Position"
+                placeholder="Please enter the third position"
 
                 name="position3"
                 value={props.workExp.position3}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Start Date - End Date
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Start - End"
+                placeholder="Please enter the start date and end date"
 
                 name="startEnd3"
                 value={props.workExp.startEnd3}
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+                }
+                }>Responsibilities
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Responsibilies"
+                placeholder="Please enter the responsibilities description"
                 multiline
 
                 name="responsibilities3"
@@ -179,6 +301,8 @@ export default function WorkExperience(props){
             />
             <br/>
             <br/>
+
+
             <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"
@@ -191,7 +315,7 @@ export default function WorkExperience(props){
                 endIcon={<ArrowRightIcon />}
 
                 onClick={() => props.nextStep()}
-            >Next</Button>
+            >Next step</Button>
         </React.Fragment>
 
     );

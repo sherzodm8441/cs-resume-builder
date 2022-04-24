@@ -38,14 +38,30 @@ export default function Education(props){
                     Resume Builder 
             </header>
 
+
             {/* Education title at the top of page */}
-            <h1>Education</h1>
+            <h1 style={
+                {textAlign: 'left',
+                marginTop: "50px", 
+                marginLeft: "125px", 
+                marginBottom: "50px",
+                }
+                }>Education</h1>
             
-            {/* School nem text field */}
+            
+            {/* School name text field */}
+
+            <h3 style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+            }
+            
+            }>School Name</h3>
             <TextField style = {txtBox} 
                 required
                 id="outlined-required"
-                label="School Name"
+                placeholder="Please enter school name"
 
                 name="schoolName"
                 value={props.values.schoolName}
@@ -53,10 +69,18 @@ export default function Education(props){
             />
             <br/>
             <br/>
+
+            <h3 style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+            }
+            
+            }>Graduation Date</h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Graduation date"
+                placeholder="Please enter graduation date"
 
                 name="graduation"
                 value={props.values.graduation}
@@ -64,10 +88,18 @@ export default function Education(props){
             />
             <br/>
             <br/>
+
+            <h3 style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+            }
+            
+            }>School Location</h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="School Location"
+                placeholder="Please enter the school location"
 
                 name="schoolLocation"
                 value={props.values.schoolLocation}
@@ -78,7 +110,7 @@ export default function Education(props){
             {/* <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Degree"
+                placeholder="Please enter the degree earned"
 
                 name="degree"
                 value={props.values.degree}
@@ -98,10 +130,18 @@ export default function Education(props){
             <MouseOverPopover style={{width: "20px", float: 'right'}} text={"Choose 'Select Degree' if N/A"}/>
             <br/>
             <br/>
+
+            <h3 style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+            }
+            
+            }>Major</h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Major"
+                placeholder="Please enter your major"
 
                 name="major"
                 value={props.values.major}
@@ -109,10 +149,18 @@ export default function Education(props){
             />
             <br/>
             <br/>
+
+            <h3 style={
+                {textAlign: 'left', 
+                marginLeft: "125px", 
+                marginBottom: "5px",
+            }
+            
+            }>Relevant Courses</h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Courses"
+                placeholder="Please enter courses attended"
 
                 name="courses"
                 value={props.values.courses}
@@ -120,6 +168,8 @@ export default function Education(props){
             />
             <br/>
             <br/>
+
+
             <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"
