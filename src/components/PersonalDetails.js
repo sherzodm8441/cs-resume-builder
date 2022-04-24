@@ -39,7 +39,7 @@ export default function PersonalDetails(props){
             style={
                 {textAlign: 'left',
                 marginTop: "50px", 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "50px",
                 }
                 }>Personal Details
@@ -50,7 +50,7 @@ export default function PersonalDetails(props){
             <h3 
             style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
                 }
                 }>Full Name
@@ -84,7 +84,7 @@ export default function PersonalDetails(props){
             {/* "Email" title at the top of the email text box with CSS and function */}
             <h3 style={
                 {textAlign: 'left',
-                 marginLeft: "125px", 
+                 marginLeft: "90px", 
                  marginBottom: "5px",
                  
                  }
@@ -106,7 +106,7 @@ export default function PersonalDetails(props){
             {/* "Phone Number" title at the top of the phone number text box with CSS and function */}
             <h3 style={
                 {textAlign: 'left',
-                 marginLeft: "125px", 
+                 marginLeft: "90px", 
                  marginBottom: "5px",
                  
                  }
@@ -128,7 +128,7 @@ export default function PersonalDetails(props){
             {/* "Location" title at the top of the location text box with CSS and function */}
             <h3 style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
             }
             
@@ -151,7 +151,7 @@ export default function PersonalDetails(props){
             {/* "Portfolio Link" title at the top of the portfolio text box with CSS and function */}
             <h3 style={
                 {textAlign: 'left',
-                 marginLeft: "125px",
+                 marginLeft: "90px",
                   marginBottom: "5px"
                 }
 
