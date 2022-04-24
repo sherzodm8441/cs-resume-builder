@@ -107,19 +107,7 @@ export default function Education(props){
             />
             <br/>
             <br/>
-<<<<<<< HEAD
-
-            <h3 style={
-                {textAlign: 'left', 
-                marginLeft: "125px", 
-                marginBottom: "5px",
-            }
-            
-            }>Degree</h3>
-            <TextField style = {txtBox}
-=======
             {/* <TextField style = {txtBox}
->>>>>>> origin
                 required
                 id="outlined-required"
                 placeholder="Please enter the degree earned"
@@ -194,13 +182,9 @@ export default function Education(props){
                 endIcon={<ArrowRightIcon />}
                 
                 onClick={() => props.nextStep()}
-<<<<<<< HEAD
-            >Next step</Button>
-=======
             >Next</Button>
 
             
->>>>>>> origin
         </React.Fragment>
 
     );
