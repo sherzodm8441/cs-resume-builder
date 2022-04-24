@@ -42,26 +42,25 @@ export default function Education(props){
             {/* Education title at the top of page */}
             <h1 style={
                 {textAlign: 'left',
-                marginTop: "50px", 
-                marginLeft: "125px", 
+                marginTop: "100px", 
+                marginLeft: "90px", 
                 marginBottom: "50px",
                 }
                 }>Education</h1>
             
-            
             {/* School name text field */}
-
-            <h3 style={
+            <h3 
+            style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
-            }
-            
-            }>School Name</h3>
+                }
+                }>School Name
+            </h3>
             <TextField style = {txtBox} 
                 required
                 id="outlined-required"
-                placeholder="Please enter school name"
+                placeholder="Please enter your school name"
 
                 name="schoolName"
                 value={props.values.schoolName}
@@ -70,17 +69,18 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 style={
+            <h3 
+            style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
-            }
-            
-            }>Graduation Date</h3>
+                }
+                }>Graduation Date
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter graduation date"
+                placeholder="Please enter your graduation date"
 
                 name="graduation"
                 value={props.values.graduation}
@@ -89,17 +89,18 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 style={
+            <h3 
+            style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
-            }
-            
-            }>School Location</h3>
+                }
+                }>School Location
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter the school location"
+                placeholder="Please enter your school location"
 
                 name="schoolLocation"
                 value={props.values.schoolLocation}
@@ -131,17 +132,18 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 style={
+            <h3 
+            style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
-            }
-            
-            }>Major</h3>
+                }
+                }>Major
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter your major"
+                placeholder="Please enter your school major"
 
                 name="major"
                 value={props.values.major}
@@ -150,17 +152,18 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 style={
+            <h3 
+            style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
-            }
-            
-            }>Relevant Courses</h3>
+                }
+                }>Relavant Courses
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter courses attended"
+                placeholder="Please enter relevant courses you have taken"
 
                 name="courses"
                 value={props.values.courses}
@@ -182,7 +185,7 @@ export default function Education(props){
                 endIcon={<ArrowRightIcon />}
                 
                 onClick={() => props.nextStep()}
-            >Next</Button>
+            >Next step</Button>
 
             
         </React.Fragment>

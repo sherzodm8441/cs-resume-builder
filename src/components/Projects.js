@@ -50,24 +50,22 @@ export default function Projects(props){
                     Resume Builder
             </header>
 
-
-            {/* "Projects" title at the top of page with CSS */}
             <h1 style={
                 {textAlign: 'left',
-                marginTop: "50px", 
-                marginLeft: "125px", 
+                marginTop: "100px", 
+                marginLeft: "90px", 
                 marginBottom: "50px",
                 }
                 }>Projects</h1>
 
             <h3 
-                style={
+            style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Project 1
-                </h3>
+                }>Title
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -81,11 +79,11 @@ export default function Projects(props){
             <h3 
             style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Link 
-                </h3>
+                }>Link
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -109,11 +107,11 @@ export default function Projects(props){
             <h3 
             style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
                 }
                 }>Description
-                </h3>
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -128,14 +126,16 @@ export default function Projects(props){
             <br/>
             <br/>
 
+
             <h3 
             style={
                 {textAlign: 'left', 
-                marginLeft: "125px", 
+                marginLeft: "90px", 
                 marginBottom: "5px",
+                marginTop: "50px"
                 }
-                }>Project 2
-                </h3>
+                }>Title
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -146,6 +146,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Link
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -166,6 +174,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Description
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -178,6 +194,16 @@ export default function Projects(props){
             />
             <br/>
             <br/>
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                marginTop: "50px",
+                }
+                }>Title
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -188,6 +214,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Link
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -208,6 +242,15 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Description
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
