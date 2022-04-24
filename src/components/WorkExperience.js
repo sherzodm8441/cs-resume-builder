@@ -58,20 +58,20 @@ export default function WorkExperience(props){
 
             <h1 style={
                 {textAlign: 'left',
-                marginTop: "100px", 
+                marginTop: "80px", 
                 marginLeft: "90px", 
-                marginBottom: "50px",
+                marginBottom: "40px",
                 }
                 }>Work Experience</h1>
 
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Work Place
-            </h3>   
+                }>Company Name <span>*</span>
+            </h4>   
             <TextField style = {txtBox}
                 required //material UI provided specifications
                 id="outlined-required" //mui
@@ -82,14 +82,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)} //JSX
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Work Position
-            </h3>
+                }>Job Title <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -100,14 +100,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Start Date - End Date
-            </h3>
+                }>Start Date - End Date <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -118,14 +118,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Responsabilities
-            </h3>
+                }>Responsibilities <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -141,15 +141,15 @@ export default function WorkExperience(props){
             <br/>
 
 
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 marginTop: "50px"
                 }
-                }>Work Place
-            </h3>
+                }>Company Name <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -160,14 +160,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Work Position
-            </h3>
+                }>Job Title <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -178,14 +178,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Start Date - End Date
-            </h3>
+                }>Start Date - End Date <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -196,14 +196,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Responsabilities
-            </h3>
+                }>Responsibilities <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -218,15 +218,15 @@ export default function WorkExperience(props){
             <br/>
 
 
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 marginTop: "50px"
                 }
-                }>Work Place
-            </h3>
+                }>Company Name 
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -237,14 +237,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Work Position
-            </h3>
+                }>Job Title
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -255,14 +255,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
                 }>Start Date - End Date
-            </h3>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -273,14 +273,14 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Responsabilities
-            </h3>
+                }>Responsibilities
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
