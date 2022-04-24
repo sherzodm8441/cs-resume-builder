@@ -49,7 +49,22 @@ export default function Projects(props){
                     Resume Builder
             </header>
 
-            <h1>Projects</h1>
+            <h1 style={
+                {textAlign: 'left',
+                marginTop: "100px", 
+                marginLeft: "90px", 
+                marginBottom: "50px",
+                }
+                }>Projects</h1>
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Title
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -60,6 +75,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Link
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -80,6 +103,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Description
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -93,6 +124,17 @@ export default function Projects(props){
             <MouseOverPopover style={{width: "20px", float: 'right'}} text={projectsTip}/>
             <br/>
             <br/>
+
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                marginTop: "50px"
+                }
+                }>Title
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -103,6 +145,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Link
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -123,6 +173,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Description
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -135,6 +193,16 @@ export default function Projects(props){
             />
             <br/>
             <br/>
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                marginTop: "50px",
+                }
+                }>Title
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -145,6 +213,14 @@ export default function Projects(props){
                 onChange={(event) => props.updateProjects(event)}
             />
             
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Link
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -165,6 +241,15 @@ export default function Projects(props){
                 onChange={(event) => props.updateWorkExp(event)}
             /> */}
             
+
+            <h3 
+            style={
+                {textAlign: 'left', 
+                marginLeft: "90px", 
+                marginBottom: "5px",
+                }
+                }>Description
+            </h3>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
