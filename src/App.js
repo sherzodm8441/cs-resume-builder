@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import React, { useState, useRef } from "react"
 import Form from "./components/Form"
 import Resume from "./components/Resume";
 import './index.css';
@@ -8,7 +8,7 @@ function App() {
 
   //The three STATES and update functions below could have been combined into one. But the way it is now provides better readibility
 
-  const [values, setValues] = useState({ //holds values for pages Education and Personal details 
+  const [values, setValues] = useState(JSON.parse(localStorage.getItem('values')) || { //holds values for pages Education and Personal details 
     firstName: "",
     lastName : "", 
     email : "",
@@ -22,7 +22,11 @@ function App() {
     major : ""
 })
 
-const [workExp, setWorkExp] = useState({ //holds values for Work Experience (# of workExp are fixed)
+React.useEffect(() => { // store values in localStorage
+  localStorage.setItem('values', JSON.stringify(values))
+}, [values])
+
+const [workExp, setWorkExp] = useState(JSON.parse(localStorage.getItem('workExp')) || { //holds values for Work Experience (# of workExp are fixed)
     workPlace1 : "",
     position1 : "",
     startEnd1 : "",
@@ -37,7 +41,11 @@ const [workExp, setWorkExp] = useState({ //holds values for Work Experience (# o
     responsibilities3 : ""
 })
 
-const [projects, setProjects] = useState({ //holds values for Projects (# of projects are fixed)
+React.useEffect(() => { // store workExp in localStorage
+  localStorage.setItem('workExp', JSON.stringify(workExp))
+}, [workExp])
+
+const [projects, setProjects] = useState(JSON.parse(localStorage.getItem('projects')) || { //holds values for Projects (# of projects are fixed)
     title1 : "",
     link1 : "",
     description1 : "",
@@ -48,6 +56,10 @@ const [projects, setProjects] = useState({ //holds values for Projects (# of pro
     link3 : "",
     description3 : ""
 })
+
+React.useEffect(() => { // store projects in localStorage, so the tasks persist after a refresh
+  localStorage.setItem('projects', JSON.stringify(projects))
+}, [projects])
 
 
 function updateValues(event){ //updates values for Education and Personal Details
