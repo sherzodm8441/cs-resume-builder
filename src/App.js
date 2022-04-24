@@ -3,7 +3,6 @@ import Form from "./components/Form"
 import Resume from "./components/Resume";
 import './index.css';
 import { useReactToPrint } from "react-to-print";
-import Button from '@mui/material/Button';
 
 function App() {
 
@@ -74,7 +73,7 @@ function updateProjects(event){ //updates values for Projects
 }
 
   const componentRef = useRef();
-  const handlePrint = useReactToPrint({
+  const handleDownload = useReactToPrint({ //handle the function of the download button
     content: () => componentRef.current,
   });
 
@@ -88,13 +87,8 @@ function updateProjects(event){ //updates values for Projects
           updateValues={updateValues}
           updateWorkExp={updateWorkExp}
           updateProjects={updateProjects}
+          handleDownload={handleDownload}
         />
-        <Button  
-          variant="contained"
-          // endIcon={<ArrowRightIcon />}
-          
-          onClick={handlePrint}
-      >Download</Button>
       </div>
       <div ref={componentRef} className="resume">
         <Resume 

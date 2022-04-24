@@ -57,6 +57,7 @@ export default function Form(props){
                         lastStep = {lastStep}
                         projects = {props.projects}
                         updateProjects = {props.updateProjects}
+                        handleDownload = {props.handleDownload}
                     />
                 </div>
             );
