@@ -90,7 +90,7 @@ function updateProjects(event){ //updates values for Projects
   });
 
   return (
-    <div className="App">
+    <div className="App" style={{}}>
       <div className="form">
         <Form 
           values={values}

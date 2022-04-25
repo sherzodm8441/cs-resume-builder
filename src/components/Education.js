@@ -8,7 +8,8 @@ import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
 
 const txtBox = {
-    width: "70%", /* Controls the width of the text input boxes */
+    width: "73%", /* Controls the width of the text input boxes */
+    height: "40px",
 }
 
 const nxtBtn = { /* Controls the color of the next button as well as placement on the page */
@@ -32,31 +33,31 @@ export default function Education(props){
         <React.Fragment>
             
             {/* Project title with logo located in header */}
-            <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
-              <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
+            <header style={{position:"relative", textAlign: "left", font: "sans-serif", fontSize: "16px", color: "darkblue", padding:"20px"}}>
+              <a href="">  <img src={Logo} style={{width: "40px", height: "40px", float:"left"}}>
                     </img></a> 
-                    Resume Builder 
+                    Resume <br/>Builder 
             </header>
 
 
             {/* Education title at the top of page */}
             <h1 style={
                 {textAlign: 'left',
-                marginTop: "100px", 
+                marginTop: "80px", 
                 marginLeft: "90px", 
-                marginBottom: "50px",
+                marginBottom: "40px",
                 }
                 }>Education</h1>
             
             {/* School name text field */}
-            <h3 
+            <h4
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>School Name
-            </h3>
+                }> University/Program Name <span>*</span>
+            </h4>
             <TextField style = {txtBox} 
                 required
                 id="outlined-required"
@@ -69,14 +70,14 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Graduation Date
-            </h3>
+                }>Graduation Date <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -89,14 +90,14 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 
+            <h4
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>School Location
-            </h3>
+                }> School Location 
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -109,28 +110,28 @@ export default function Education(props){
             <br/>
             <br/>
             <div>
-                <form>
+                <form style = {{width: "73%", marginLeft:"83px"}}>
                     <select name="degree" value={props.values.degree} className="dropdown" onChange={(event) => props.updateValues(event)}>
                         <option value="">Select degree</option>
+                        <option value="Associate's">Associate's</option>
                         <option value="Bachelor's">Bachelor's</option>
-                        <option value="Associate">Associate</option>
                         <option value="Master's">Master's</option>
-                        <option value="High School Diploma">High School</option>
+                        <option value="Certificate / Diploma">Certificate / Diploma</option>
                     </select>
                 </form>
             </div>
-            <MouseOverPopover style={{width: "20px", float: 'right'}} text={"Choose 'Select Degree' if N/A"}/>
+            <MouseOverPopover style={{width: "50px", float: 'right'}} text={"Choose 'Select Degree' if N/A"}/>
             <br/>
             <br/>
 
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Major
-            </h3>
+                }>Major/Field of Study <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
@@ -143,14 +144,14 @@ export default function Education(props){
             <br/>
             <br/>
 
-            <h3 
+            <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Relavant Courses
-            </h3>
+                }>Relevant Courses <span>*</span>
+            </h4>
             <TextField style = {txtBox}
                 required
                 id="outlined-required"

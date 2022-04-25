@@ -5,10 +5,24 @@ import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Logo from '../images/logo.png'
 import MouseOverPopover from "./MouseOverPopover";
+import { red } from "@mui/material/colors";
 
 /* Controls the width of the text input boxes */
+const nameTxtBox = {
+    width: "36%",
+    height: "40px",
+    marginRight: "4px",
+}
 const txtBox = {
-    width: "70%", 
+    width: "73%", 
+    height: "40px",
+
+}
+
+const locTxtBox = {
+    width: "73%", 
+    height: "40px",
+    marginLeft: "20px",
 }
 
 /* Controls the color of the next button as well as placement on the page */
@@ -26,8 +40,8 @@ export default function PersonalDetails(props){
         <React.Fragment>
             
             {/* Project title with logo located in header */}
-            <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
-              <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
+            <header style={{textAlign: "left", font: "Poppins", fontSize: "24px", color: "darkblue"}}>
+              <a href="">  <img src={Logo} style={{width: "32px", height: "32px",}}>
                     </img></a>
                     Resume Builder
             </header>
@@ -38,28 +52,28 @@ export default function PersonalDetails(props){
             <h1  
             style={
                 {textAlign: 'left',
-                marginTop: "50px", 
+                marginTop: "80px", 
                 marginLeft: "90px", 
-                marginBottom: "50px",
+                marginBottom: "40px",
                 }
-                }>Personal Details
+                }> Contact Information
             </h1>
 
             
             {/* "Full Name" title at the top of the first name and last name text box with CSS and function */}
-            <h3 
+            <h4
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
                 }
-                }>Full Name
-            </h3>
+                }>Full Name <span>*</span>
+            </h4>
 
-            <TextField style = {txtBox}
+            <TextField style = {nameTxtBox}
 
                 id="outlined-required"
-                placeholder="Please enter your first name"
+                placeholder="First name"
 
                 name="firstName"
                 value={props.values.firstName}
@@ -67,10 +81,10 @@ export default function PersonalDetails(props){
                 required={true}
             />
             
-            <TextField style = {txtBox}
+            <TextField style = {nameTxtBox}
                 
                 id="outlined-required"
-                placeholder="Please enter your last name"
+                placeholder="Last name"
 
                 name="lastName"
                 value={props.values.lastName}
@@ -82,17 +96,17 @@ export default function PersonalDetails(props){
 
 
             {/* "Email" title at the top of the email text box with CSS and function */}
-            <h3 style={
+            <h4 style={
                 {textAlign: 'left',
                  marginLeft: "90px", 
                  marginBottom: "5px",
                  
                  }
-            }>Email</h3>
+            }>Email <span>*</span></h4>
             <TextField style = {txtBox}
                 
                 id="outlined-required"
-                placeholder="Please enter your email"
+                placeholder="Enter your email address"
 
                 name="email"
                 value={props.values.email}
@@ -104,13 +118,13 @@ export default function PersonalDetails(props){
 
 
             {/* "Phone Number" title at the top of the phone number text box with CSS and function */}
-            <h3 style={
+            <h4 style={
                 {textAlign: 'left',
                  marginLeft: "90px", 
                  marginBottom: "5px",
                  
                  }
-            }>Phone Number</h3>
+            }>Phone Number <span>*</span></h4>
             <TextField style = {txtBox}
                 
                 id="outlined-required"
@@ -126,14 +140,14 @@ export default function PersonalDetails(props){
 
 
             {/* "Location" title at the top of the location text box with CSS and function */}
-            <h3 style={
+            <h4 style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
             }
             
-            }>Location</h3>
-            <TextField style = {txtBox}
+            }>Location <span>*</span></h4>
+            <TextField style = {locTxtBox}
             
                 id="outlined-required"
                 placeholder="Please enter your location"
@@ -149,13 +163,13 @@ export default function PersonalDetails(props){
 
 
             {/* "Portfolio Link" title at the top of the portfolio text box with CSS and function */}
-            <h3 style={
+            <h4 style={
                 {textAlign: 'left',
                  marginLeft: "90px",
                   marginBottom: "5px"
                 }
 
-            }>Portfolio Link</h3>
+            }>Portfolio Link <span>(Optional)</span></h4>
             <TextField style = {txtBox}
                
                 id="outlined-required"
