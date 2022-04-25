@@ -30,11 +30,12 @@ export default function Resume(props){
                     <div id="degreeMajor">
                         <div id="degree">{props.values.degree}</div> 
                         <div id="graduation" >{props.values.graduation}</div>
-                        <p id="major">{props.values.major}</p>
+                        
                     </div>
+                  
                     
                 </div>
-                
+                <div id="major">{props.values.major}</div>
                 
             </div>
             <div className="relcourse">
