@@ -1,4 +1,5 @@
 import React from "react";
+import WorkExpCard from "./WorkExpCard";
 
 //Material UI components
 import TextField from '@mui/material/TextField';
@@ -7,6 +8,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
+import AddIcon from '@mui/icons-material/Add';
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -36,20 +38,22 @@ const bckBtn = {
 
 
 export default function WorkExperience(props){
-    //this array contains the text inside the mouse popover. 
-    const responsibilitiesTip = [<b>Points to consider:</b>, 
-    <br/>,  
-    'Growth: What did you add to the company?',
-    <br/>,
-    'Frequency : How often did you complete tasks?',
-    <br/>,
-    'Impact: How many people did your work help?',
-    <br/>,
-    'Reduction: How did you create efficiency by helping reduce or save XX?']
+    // //this array contains the text inside the mouse popover. 
+    // const responsibilitiesTip = [<b>Points to consider:</b>, 
+    // <br/>,  
+    // 'Growth: What did you add to the company?',
+    // <br/>,
+    // 'Frequency : How often did you complete tasks?',
+    // <br/>,
+    // 'Impact: How many people did your work help?',
+    // <br/>,
+    // 'Reduction: How did you create efficiency by helping reduce or save XX?']
 
     return(
         
         <React.Fragment>
+
+            
 
             {/* Project title with logo located in header */}
             <header style={{position:"relative", textAlign: "left", font: "sans-serif", fontSize: "16px", color: "darkblue", padding:"20px"}}>
@@ -65,8 +69,12 @@ export default function WorkExperience(props){
                 marginBottom: "40px",
                 }
                 }>Work Experience</h1>
+            
+            
+            {/* inputs */}
+            {props.workExpsList} 
 
-            <h4 
+            {/* <h4 
             style={
                 {textAlign: 'left', 
                 marginLeft: "90px", 
@@ -143,6 +151,14 @@ export default function WorkExperience(props){
             <br/>
             <br/>
 
+            <WorkExpCard 
+                workPlace={props.workExp.workPlace1}
+                position={props.workExp.position1}
+                startEnd={props.workExp.startEnd1}
+                responsibilities={props.workExp.responsibilities1}
+                responsibilitiesTip={responsibilitiesTip}
+                updateWorkExp={props.updateWorkExp}
+            />
 
             <h4 
             style={
@@ -295,8 +311,15 @@ export default function WorkExperience(props){
                 onChange={(event) => props.updateWorkExp(event)}
             />
             <br/>
-            <br/>
+            <br/> */}
 
+
+            <Button 
+                variant="outlined"
+                color="secondary"
+
+                onClick={() => props.addWorkExpCard()}
+            >{<AddIcon />}</Button>
 
             <Button style = {bckBtn}
                 variant="outlined"
@@ -305,6 +328,7 @@ export default function WorkExperience(props){
 
                 onClick={() => props.lastStep()}
             >Back</Button>
+
             <Button  style = {nxtBtn}
                 variant="contained"
                 endIcon={<ArrowRightIcon />}

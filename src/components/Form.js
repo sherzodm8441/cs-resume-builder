@@ -47,8 +47,8 @@ export default function Form(props){
                     <WorkExperience 
                         nextStep = {nextStep}
                         lastStep = {lastStep}
-                        workExp = {props.workExp}
-                        updateWorkExp = {props.updateWorkExp}
+                        workExpsList={props.workExpsList}
+                        addWorkExpCard={props.addWorkExpCard}
                     />
                     
                 </div>
@@ -57,11 +57,10 @@ export default function Form(props){
             return(
                 <div>
                     <Projects 
-                        // nextStep = {nextStep}
                         lastStep = {lastStep}
-                        projects = {props.projects}
-                        updateProjects = {props.updateProjects}
+                        addProjectCard={props.addProjectCard}
                         handleDownload = {props.handleDownload}
+                        projectsList={props.projectsList}
                     />
                 </div>
             );
