@@ -53,7 +53,7 @@ export default function WorkExperience(props){
 
             {/* Project title with logo located in header */}
             <header style={{position:"relative", textAlign: "left", font: "sans-serif", fontSize: "16px", color: "darkblue", padding:"20px"}}>
-              <a href="">  <img src={Logo} style={{width: "40px", height: "40px", float:"left"}}>
+              <a href="https://sherzodm8441.github.io/cs-resume-builder/">  <img src={Logo} style={{width: "40px", height: "40px", float:"left"}}>
                     </img></a> 
                     Resume <br/>Builder 
             </header>
