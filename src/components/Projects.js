@@ -18,14 +18,16 @@ const txtBox = {
 const bckBtn = {
     float: "left",
     marginLeft: "100px",
-    marginTop: "100px"
+    marginTop: "50px",
+    marginBottom: "100px"
 }
 
 /* Controls the placement of the download button on the page */
 const downloadBtn = {
     float: "right",
     marginRight: "100px",
-    marginTop: "100px"
+    marginTop: "50px",
+    marginBottom: "100px"
 }
 
 
@@ -52,10 +54,10 @@ export default function Projects(props){
         <React.Fragment>
 
             {/* Project title with logo located in header */}
-            <header style={{textAlign: "left", font: "sans-serif", fontSize: "30px", color: "darkblue"}}>
-              <a href="">  <img src={Logo} style={{width: "24px", height: "24px",}}>
-                    </img></a>
-                    Resume Builder
+            <header style={{position:"relative", textAlign: "left", font: "sans-serif", fontSize: "16px", color: "darkblue", padding:"20px"}}>
+              <a href="">  <img src={Logo} style={{width: "40px", height: "40px", float:"left"}}>
+                    </img></a> 
+                    Resume <br/>Builder 
             </header>
 
             <h1 style={
@@ -77,7 +79,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Title"
+                label="Please add the project title/name"
 
                 name="title1"
                 value={props.projects.title1}
@@ -95,7 +97,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Link"
+                label="Please add a link to the project"
 
                 name="link1"
                 value={props.projects.link1}
@@ -113,14 +115,14 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Description"
+                label="Please add a project description"
                 multiline
 
                 name="description1"
                 value={props.projects.description1}
                 onChange={(event) => props.updateProjects(event)}
             />
-            <MouseOverPopover style={{width: "20px", float: 'right'}} text={projectsTip}/>
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "110px", marginLeft: "-110px"}} text={projectsTip}/>
             <br/>
             <br/>
 
@@ -137,7 +139,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Title"
+                label="Please add the project title/name"
 
                 name="title2"
                 value={props.projects.title2}
@@ -155,7 +157,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Link"
+                label="Please add a link to the project"
 
                 name="link2"
                 value={props.projects.link2}
@@ -173,7 +175,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                label="Description"
+                label="Please add a project description"
                 multiline
 
                 name="description2"
@@ -195,7 +197,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 //required
                 id="outlined-required"
-                label="Title"
+                label="Please add the project title/name"
 
                 name="title3"
                 value={props.projects.title3}
@@ -213,7 +215,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 //required
                 id="outlined-required"
-                label="Link"
+                label="Please add a link to the project"
 
                 name="link3"
                 value={props.projects.link3}
@@ -233,7 +235,7 @@ export default function Projects(props){
             <TextField style = {txtBox}
                 //required
                 id="outlined-required"
-                label="Description"
+                label="Please add a project description"
                 multiline
 
                 name="description3"

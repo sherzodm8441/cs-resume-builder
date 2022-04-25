@@ -30,7 +30,8 @@ const nxtBtn = {
     backgroundColor: "#2db300", 
     float: "right",
     marginRight: "100px",
-    marginTop: "100px",
+    marginTop: "50px",
+    marginBottom: "100px"
 }
 
 
@@ -40,10 +41,10 @@ export default function PersonalDetails(props){
         <React.Fragment>
             
             {/* Project title with logo located in header */}
-            <header style={{textAlign: "left", font: "Poppins", fontSize: "24px", color: "darkblue"}}>
-              <a href="">  <img src={Logo} style={{width: "32px", height: "32px",}}>
-                    </img></a>
-                    Resume Builder
+            <header style={{position:"relative", textAlign: "left", font: "sans-serif", fontSize: "16px", color: "darkblue", padding:"20px"}}>
+              <a href="">  <img src={Logo} style={{width: "40px", height: "40px", float:"left"}}>
+                    </img></a> 
+                    Resume <br/>Builder 
             </header>
 
             
@@ -70,10 +71,10 @@ export default function PersonalDetails(props){
                 }>Full Name <span>*</span>
             </h4>
 
-            <TextField style = {nameTxtBox}
+            <TextField style = {{width: "36%", height: "40px", marginLeft: "-20px"}}
 
                 id="outlined-required"
-                placeholder="First name"
+                label="First name"
 
                 name="firstName"
                 value={props.values.firstName}
@@ -81,10 +82,10 @@ export default function PersonalDetails(props){
                 required={true}
             />
             
-            <TextField style = {nameTxtBox}
+            <TextField style = {{width: "36%", height: "40px", marginLeft: "5px"}}
                 
                 id="outlined-required"
-                placeholder="Last name"
+                label="Last name"
 
                 name="lastName"
                 value={props.values.lastName}
@@ -106,13 +107,14 @@ export default function PersonalDetails(props){
             <TextField style = {txtBox}
                 
                 id="outlined-required"
-                placeholder="Enter your email address"
+                label="Enter your email address"
 
                 name="email"
                 value={props.values.email}
                 onChange={(event) => props.updateValues(event)}
                 required={true}
             />
+             <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "88px", marginLeft: "-88px"}} text={'ex. email@gmail.com'}/>
             <br/>
             <br/>
 
@@ -128,13 +130,14 @@ export default function PersonalDetails(props){
             <TextField style = {txtBox}
                 
                 id="outlined-required"
-                placeholder="Please enter your phone number"
+                label="Please enter your phone number"
 
                 name="phone"
                 value={props.values.phone}
                 onChange={(event) => props.updateValues(event)}
                 required={true}
             />
+             <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "88px", marginLeft: "-88px"}} text={'ex. (333)333-3333'}/>
             <br/>
             <br/>
 
@@ -147,17 +150,17 @@ export default function PersonalDetails(props){
             }
             
             }>Location <span>*</span></h4>
-            <TextField style = {locTxtBox}
+            <TextField style = {txtBox}
             
                 id="outlined-required"
-                placeholder="Please enter your location"
+                label="Please enter your location"
 
                 name="location"
                 value={props.values.location}
                 onChange={(event) => props.updateValues(event)}
                 required={true}
             />
-            <MouseOverPopover style={{width: "20px", float: 'right'}} text={'ex. Brooklyn, NY'}/>
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "88px", marginLeft: "-88px"}} text={'ex. Brooklyn, NY'}/>
             <br/>
             <br/>
 
@@ -166,14 +169,14 @@ export default function PersonalDetails(props){
             <h4 style={
                 {textAlign: 'left',
                  marginLeft: "90px",
-                  marginBottom: "5px"
+                 marginBottom: "5px"
                 }
-
             }>Portfolio Link <span>(Optional)</span></h4>
-            <TextField style = {txtBox}
+
+            <TextField style = {{width: "73%", height: "40px", marginLeft: "-20px"}}
                
                 id="outlined-required"
-                placeholder="Please enter a link to your portfolio"
+                label="Please enter a link to your portfolio"
 
                 name="portfolioLink"
                 value={props.values.portfolioLink}
@@ -182,6 +185,7 @@ export default function PersonalDetails(props){
             />
             <br/>
             <br/>
+
             {props.values.firstName && props.values.lastName && props.values.email && props.values.location?<Button style = {nxtBtn}
                 variant="contained"
                 endIcon={<ArrowRightIcon />}

@@ -7,23 +7,27 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
 
+/* Controls the width of the text input boxes */
 const txtBox = {
-    width: "73%", /* Controls the width of the text input boxes */
+    width: "73%", 
     height: "40px",
 }
 
-const nxtBtn = { /* Controls the color of the next button as well as placement on the page */
+/* Controls the color of the next button as well as placement on the page */
+const nxtBtn = { 
     backgroundColor: "#2db300", 
     float: "right",
     marginRight: "100px",
-    marginTop: "100px"
+    marginTop: "50px",
+    marginBottom: "100px"
 }
 
 /* Controls the placement of the back button on the page */
 const bckBtn = { 
     float: "left",
     marginLeft: "100px",
-    marginTop: "100px"
+    marginTop: "50px",
+    marginBottom: "100px"
 }
 
 
@@ -53,15 +57,15 @@ export default function Education(props){
             <h4
             style={
                 {textAlign: 'left', 
-                marginLeft: "90px", 
+                marginLeft: "75px", 
                 marginBottom: "5px",
                 }
                 }> University/Program Name <span>*</span>
             </h4>
-            <TextField style = {txtBox} 
+            <TextField style = {{width: "73%", height: "40px", marginLeft: "-25px"}} 
                 required
                 id="outlined-required"
-                placeholder="Please enter your school name"
+                label="Please enter your university/program name"
 
                 name="schoolName"
                 value={props.values.schoolName}
@@ -73,7 +77,7 @@ export default function Education(props){
             <h4 
             style={
                 {textAlign: 'left', 
-                marginLeft: "90px", 
+                marginLeft: "75px", 
                 marginBottom: "5px",
                 }
                 }>Graduation Date <span>*</span>
@@ -81,19 +85,20 @@ export default function Education(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter your graduation date"
+                label="Please enter your graduation date"
 
                 name="graduation"
                 value={props.values.graduation}
                 onChange={(event) => props.updateValues(event)}
             />
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "95px", marginLeft: "-95px"}} text={"ex. MM/YYYY"}/>
             <br/>
             <br/>
 
             <h4
             style={
                 {textAlign: 'left', 
-                marginLeft: "90px", 
+                marginLeft: "75px", 
                 marginBottom: "5px",
                 }
                 }> School Location 
@@ -101,41 +106,50 @@ export default function Education(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter your school location"
+                label="Please enter your university/program location"
 
                 name="schoolLocation"
                 value={props.values.schoolLocation}
                 onChange={(event) => props.updateValues(event)}
             />
-            <br/>
-            <br/>
-            <div>
-                <form style = {{width: "73%", marginLeft:"83px"}}>
-                    <select name="degree" value={props.values.degree} className="dropdown" onChange={(event) => props.updateValues(event)}>
-                        <option value="">Select degree</option>
-                        <option value="Associate's">Associate's</option>
-                        <option value="Bachelor's">Bachelor's</option>
-                        <option value="Master's">Master's</option>
-                        <option value="Certificate / Diploma">Certificate / Diploma</option>
-                    </select>
-                </form>
-            </div>
-            <MouseOverPopover style={{width: "50px", float: 'right'}} text={"Choose 'Select Degree' if N/A"}/>
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "95px", marginLeft: "-95px"}} text={"ex. Brooklyn, NY"}/>
             <br/>
             <br/>
 
+            <h4
+            style={
+                {textAlign: 'left', 
+                marginLeft: "75px", 
+                marginBottom: "5px",
+                }
+                }>Degree/Certificate <span>*</span>
+            </h4>
+            <div>
+                <form style = {{width: "100%", marginLeft:"68px"}}>
+                    <select name="degree" value={props.values.degree} className="dropdown" onChange={(event) => props.updateValues(event)}>
+                        <option value="">Select degree</option>
+                        <option value="Associate's Degree">Associate's Degree</option>
+                        <option value="Bachelor's Degree">Bachelor's Degree</option>
+                        <option value="Master's Degree">Master's Degree</option>
+                        <option value="Certificate / Diploma">Certificate / Diploma</option>
+                    </select> <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "165px", marginLeft: "-165px"}} text={"Choose 'Select Degree' if N/A"}/>
+                    
+                </form>
+            </div>
+     
+     
             <h4 
             style={
                 {textAlign: 'left', 
-                marginLeft: "90px", 
+                marginLeft: "75px", 
                 marginBottom: "5px",
                 }
                 }>Major/Field of Study <span>*</span>
             </h4>
-            <TextField style = {txtBox}
+            <TextField style = {{width: "73%", height: "40px", marginLeft: "-20px"}}
                 required
                 id="outlined-required"
-                placeholder="Please enter your school major"
+                label="Please enter your major/field of study"
 
                 name="major"
                 value={props.values.major}
@@ -147,7 +161,7 @@ export default function Education(props){
             <h4 
             style={
                 {textAlign: 'left', 
-                marginLeft: "90px", 
+                marginLeft: "75px", 
                 marginBottom: "5px",
                 }
                 }>Relevant Courses <span>*</span>
@@ -155,12 +169,13 @@ export default function Education(props){
             <TextField style = {txtBox}
                 required
                 id="outlined-required"
-                placeholder="Please enter relevant courses you have taken"
+                label="Please enter any relevant courses you have taken"
 
                 name="courses"
                 value={props.values.courses}
                 onChange={(event) => props.updateValues(event)}
             />
+             <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "95px", marginLeft: "-95px"}} text={"ex. Calculus, Algorithms, etc"}/>
             <br/>
             <br/>
 
