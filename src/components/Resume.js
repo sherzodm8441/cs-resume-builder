@@ -1,4 +1,5 @@
 import React from "react"
+import WorkExpResume from "./WorkExpResume"
 
 
 export default function Resume(props){
@@ -47,11 +48,22 @@ export default function Resume(props){
 
         <div className="workExp">
             <div className="workExpHeader">
-                {props.workExp.workPlace1 && <h2>Work Experience</h2>}
+                {/* {props.workExp.workPlace1 && <h2>Work Experience</h2>} */}
+                {props.workExps[0].workPlace && <h2>Work Experience</h2>}
             </div>
 
             <div className="exps">
-                <div className="exp">
+
+                {/* workExp output */}
+                {props.workExpResume}
+                {/* <WorkExpResume 
+                    workPlace={props.workExp.workPlace1}
+                    position={props.workExp.position1}
+                    startEnd={props.workExp.startEnd1}
+                    responsibilities={props.workExp.responsibilities1}
+                /> */}
+                
+                {/* <div className="exp">
                     <div className="expLeft">
                         <div style={{fontWeight: "bold"}} id="workplace">{props.workExp.workPlace1}</div>
                         <div style={{fontWeight: "bold"}} id="position">{props.workExp.position1}</div>
@@ -86,19 +98,25 @@ export default function Resume(props){
                     </div>
                     
                     <div id="responsibilities">{props.workExp.responsibilities4}</div>
-                </div>
+                </div> */}
             </div>
         </div>
 
-        {props.projects.title1 && <div className="firstLine"></div>}
+        {/* {props.projects.title1 && <div className="firstLine"></div>} */}
+        {<div className="firstLine"></div>}
 
         <div className="projectsSection">
             <div className="projectsHeader">
-                {props.projects.title1 && <h2>Projects</h2>}
+                {/* {props.projects.title1 && <h2>Projects</h2>} */}
+                {props.projects[0].title && <h2>Projects</h2>}
             </div>
 
             <div className="projects">
-                <div className="project">
+
+                {/* project output */}
+                {props.projectResume}
+                
+                {/* <div className="project">
                         <div className="projectLeft">
                             <div style={{fontWeight: "bold"}} id="title">{props.projects.title1}</div>
                             <div style={{fontWeight: "bold"}} id="link">{props.projects.link1}</div>
@@ -121,7 +139,7 @@ export default function Resume(props){
                         </div>
                         
                         <div id="description">{props.projects.description3}</div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>
