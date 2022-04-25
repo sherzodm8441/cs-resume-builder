@@ -149,6 +149,7 @@ h4 {
 }
 
 #degree {
+  margin-top: 5px;
   margin-bottom: 20px;
   margin-left: 20px;
   float: left;
@@ -157,7 +158,7 @@ h4 {
 
 #major {
   margin-top: 20px;
-  margin-left: -117px;
+  margin-left: -122px;
   float: left;
   font-size: 13px;
 }
