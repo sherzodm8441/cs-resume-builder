@@ -22,15 +22,16 @@ const bckBtn = {
     float: "left",
     marginLeft: "100px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 /* Controls the placement of the download button on the page */
 const downloadBtn = {
+    backgroundColor: "#ff531a", 
     float: "right",
-    marginRight: "100px",
+    marginRight: "-350px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 
@@ -257,13 +258,11 @@ export default function Projects(props){
             />
             <br/>
             <br/> */}
-            <Button 
-                variant="outlined"
-                color="secondary"
-                // startIcon={<ArrowLeftIcon />}
+            <Button style={{marginLeft: "50px", marginBottom: "100px", color: "white", backgroundColor: "#3333ff"}}
+                variant="contained"
 
                 onClick={() => props.addProjectCard()}
-            >{<AddIcon />}</Button>
+            >{<AddIcon />}ADD</Button>
 
             <Button style = {bckBtn}
                 variant="outlined"
@@ -272,6 +271,8 @@ export default function Projects(props){
                 
                 onClick={() => props.lastStep()}
             >Back</Button>
+
+            
             <Button style = {downloadBtn}
                 variant="contained"
                 endIcon={<DownloadIcon />}

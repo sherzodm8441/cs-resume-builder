@@ -3,8 +3,9 @@ import React from "react"
 //Material UI components
 import TextField from '@mui/material/TextField';
 import MouseOverPopover from './MouseOverPopover'
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import Button from '@mui/material/Button';
+import AddIcon from '@mui/icons-material/Add';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -24,6 +25,7 @@ export default function workExpCard(props){
             {textAlign: 'left', 
             marginLeft: "90px", 
             marginBottom: "5px",
+            marginTop: "80px"
             }
             }>Company Name <span>*</span>
         </h4>   
@@ -63,7 +65,7 @@ export default function workExpCard(props){
             }
             }>Start Date - End Date <span>*</span>
         </h4>
-        <TextField style = {txtBox}
+        <TextField style = {{width: "70%", marginLeft: "20px"}}
             required
             id="outlined-required"
             label="Please enter the start and end date of the job if applicable"
@@ -72,7 +74,7 @@ export default function workExpCard(props){
             value={props.startEnd}
             onChange={(event) => props.updateWorkExpsList(event, props.i)}
         />
-        <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "110px", marginLeft: "-110px"}} text={"ex. MM/YYYY - MM/YYYY or Present"}/>
+        <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "90px", marginLeft: "-90px"}} text={"ex. MM/YYYY - MM/YYYY or Present"}/>
         
         <h4 
         style={
@@ -82,7 +84,7 @@ export default function workExpCard(props){
             }
             }>Responsibilities <span>*</span>
         </h4>
-        <TextField style = {txtBox}
+        <TextField style = {{width: "70%", marginLeft: "20px"}}
             required
             id="outlined-required"
             label="Please enter a description of your job responsibilities"
@@ -92,15 +94,17 @@ export default function workExpCard(props){
             value={props.responsibilities}
             onChange={(event) => props.updateWorkExpsList(event, props.i)}
         />
-        <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "110px", marginLeft: "-110px"}} text={props.tip}/>
+        <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "90px", marginLeft: "-90px"}} text={props.tip}/>
         <br/>
         <br/>
-        <Button  
+
+        <Button style={{float: "right", marginRight: "250px", color: "#cc0000", backgroundColor: "lightgrey"}} 
             variant="contained"
             // endIcon={<DeleteForeverIcon />}
 
             onClick={() => props.deleteWorkExpCard(props.i)}
-            >{<DeleteForeverIcon />}</Button>
+            >{<DeleteForeverIcon />}DELETE</Button>
+
         </div>
     )
 }

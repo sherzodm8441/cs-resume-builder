@@ -19,6 +19,7 @@ export default function ProjectCard(props){
                 {textAlign: 'left', 
                 marginLeft: "90px", 
                 marginBottom: "5px",
+                marginTop: "80px"
                 }
                 }>Title
             </h4>
@@ -58,7 +59,7 @@ export default function ProjectCard(props){
                 }
                 }>Description
             </h4>
-            <TextField style = {txtBox}
+            <TextField style = {{width: "70%", marginLeft: "20px"}}
                 required
                 id="outlined-required"
                 label="Please add a project description"
@@ -68,15 +69,17 @@ export default function ProjectCard(props){
                 value={props.description}
                 onChange={(event) => props.updateProjects(event, props.i)}
             />
-            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "110px", marginLeft: "-110px"}} text={props.tip}/>
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "90px", marginLeft: "-90px"}} text={props.tip}/>
             <br/>
             <br/>
-            <Button  
+            
+            <Button style={{float: "right", marginRight: "250px", color: "#cc0000", backgroundColor: "lightgrey"}} 
             variant="contained"
             // endIcon={<DeleteForeverIcon />}
 
             onClick={() => props.deleteProjectCard(props.i)}
-            >{<DeleteForeverIcon />}</Button>
+            >{<DeleteForeverIcon />}DELETE</Button>
+
         </div>
     )
 }

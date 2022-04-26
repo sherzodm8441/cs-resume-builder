@@ -31,7 +31,7 @@ const nxtBtn = {
     float: "right",
     marginRight: "100px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 

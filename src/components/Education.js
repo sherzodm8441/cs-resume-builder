@@ -19,7 +19,7 @@ const nxtBtn = {
     float: "right",
     marginRight: "100px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 /* Controls the placement of the back button on the page */
@@ -27,7 +27,7 @@ const bckBtn = {
     float: "left",
     marginLeft: "100px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 
@@ -91,7 +91,7 @@ export default function Education(props){
                 value={props.values.graduation}
                 onChange={(event) => props.updateValues(event)}
             />
-            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "95px", marginLeft: "-95px"}} text={"ex. MM/YYYY"}/>
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "90px", marginLeft: "-90px"}} text={"ex. MM/YYYY"}/>
             <br/>
             <br/>
 
@@ -112,7 +112,7 @@ export default function Education(props){
                 value={props.values.schoolLocation}
                 onChange={(event) => props.updateValues(event)}
             />
-            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "95px", marginLeft: "-95px"}} text={"ex. Brooklyn, NY"}/>
+            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "90px", marginLeft: "-90px"}} text={"ex. Brooklyn, NY"}/>
             <br/>
             <br/>
 
@@ -132,7 +132,7 @@ export default function Education(props){
                         <option value="Bachelor's Degree">Bachelor's Degree</option>
                         <option value="Master's Degree">Master's Degree</option>
                         <option value="Certificate / Diploma">Certificate / Diploma</option>
-                    </select> <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "165px", marginLeft: "-165px"}} text={"Choose 'Select Degree' if N/A"}/>
+                    </select> <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "157px", marginLeft: "-157px"}} text={"Choose 'Select Degree' if N/A"}/>
                     
                 </form>
             </div>
@@ -175,7 +175,7 @@ export default function Education(props){
                 value={props.values.courses}
                 onChange={(event) => props.updateValues(event)}
             />
-             <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "95px", marginLeft: "-95px"}} text={"ex. Calculus, Algorithms, etc"}/>
+             <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "90px", marginLeft: "-90px"}} text={"ex. Calculus, Algorithms, etc"}/>
             <br/>
             <br/>
 

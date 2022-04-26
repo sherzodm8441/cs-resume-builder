@@ -10,6 +10,7 @@ import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
 import AddIcon from '@mui/icons-material/Add';
 
+
 /* Controls the width of the text input boxes */
 const txtBox = {
     width: "70%", 
@@ -23,17 +24,17 @@ const descTxtBox = {
 const nxtBtn = { 
     backgroundColor: "#2db300", 
     float: "right",
-    marginRight: "100px",
+    marginRight: "-350px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 /* Controls the placement of the back button on the page */
 const bckBtn = {
     float: "left",
-    marginLeft: "100px",
+    marginLeft: "60px",
     marginTop: "50px",
-    marginBottom: "100px"
+    marginBottom: "300px"
 }
 
 
@@ -313,13 +314,11 @@ export default function WorkExperience(props){
             <br/>
             <br/> */}
 
-
-            <Button 
-                variant="outlined"
-                color="secondary"
+            <Button style={{marginLeft: "50px", marginBottom: "100px", color: "white", backgroundColor: "#3333ff"}}
+                variant="contained"
 
                 onClick={() => props.addWorkExpCard()}
-            >{<AddIcon />}</Button>
+            >{<AddIcon />}ADD</Button>
 
             <Button style = {bckBtn}
                 variant="outlined"
