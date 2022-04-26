@@ -1,5 +1,5 @@
 import React from "react"
-import WorkExpResume from "./WorkExpResume"
+
 
 
 export default function Resume(props){
@@ -49,7 +49,7 @@ export default function Resume(props){
         <div className="workExp">
             <div className="workExpHeader">
                 {/* {props.workExp.workPlace1 && <h2>Work Experience</h2>} */}
-                {props.workExps[0].workPlace && <h2>Work Experience</h2>}
+                {props.workExps.length !== 0 && props.workExps[0].workPlace && <h2>Work Experience</h2>}
             </div>
 
             <div className="exps">
@@ -103,12 +103,12 @@ export default function Resume(props){
         </div>
 
         {/* {props.projects.title1 && <div className="firstLine"></div>} */}
-        {<div className="firstLine"></div>}
+        {props.projects.length !== 0 && props.projects[0].title && <div className="firstLine"></div>}
 
         <div className="projectsSection">
             <div className="projectsHeader">
                 {/* {props.projects.title1 && <h2>Projects</h2>} */}
-                {props.projects[0].title && <h2>Projects</h2>}
+                {props.projects.length !== 0 && props.projects[0].title && <h2>Projects</h2>}
             </div>
 
             <div className="projects">
