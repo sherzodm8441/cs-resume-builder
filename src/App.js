@@ -7,6 +7,7 @@ import WorkExpCard from "./components/WorkExpCard";
 import WorkExpResume from "./components/WorkExpResume";
 import ProjectCard from "./components/ProjectCard"
 import ProjectResume from "./components/ProjectResume";
+import { Button } from "@mui/material";
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
     courses : "",
     graduation : "",
     degree : "",
-    major : ""
+    major : "",
+    phone : ""
 })
 
 React.useEffect(() => { // store values in localStorage
@@ -261,7 +263,44 @@ function updateValues(event){ //updates values for Education and Personal Detail
     content: () => componentRef.current,
   });
 
-  
+  function restart(){
+    if(window.confirm("Do you want to start over? All values will be deleted.")){
+      console.log('cleared');
+      setProjects([
+        {
+          title: "",
+          link: "",
+          description: ""
+        }
+        ])
+
+        setWorkExps([
+          {
+            workPlace: "",
+            position: "",
+            startEnd: "",
+            responsibilities: ""
+          }
+        ])
+
+        setValues({ 
+          firstName: "",
+          lastName : "", 
+          email : "",
+          location : "",
+          portfolioLink : "",
+          schoolName : "",
+          schoolLocation : "",
+          courses : "",
+          graduation : "",
+          degree : "",
+          major : "",
+          phone : ""
+      })
+    }else{
+      console.log('canceled');
+    }
+  }
 
   return (
     <div className="App" style={{}}>
@@ -280,6 +319,9 @@ function updateValues(event){ //updates values for Education and Personal Detail
           projectsList={projectsList}
           addProjectCard={addProjectCard}
         />
+        <Button variant="outlined" color="error" onClick={() => restart()}>
+            Restart
+        </Button>
       </div>
       <div ref={componentRef} className="resume">
         <Resume 

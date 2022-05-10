@@ -9,6 +9,8 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
 import AddIcon from '@mui/icons-material/Add';
+import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
+
 
 
 /* Controls the width of the text input boxes */
@@ -62,6 +64,10 @@ export default function WorkExperience(props){
                     </img></a> 
                     Resume <br/>Builder 
             </header>
+
+            <HorizontalLabelPositionBelowStepper 
+                pageNum={2}
+            />
 
             <h1 style={
                 {textAlign: 'left',

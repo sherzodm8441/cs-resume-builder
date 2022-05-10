@@ -8,6 +8,8 @@ import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
 import DownloadIcon from '@mui/icons-material/Download';
 import AddIcon from '@mui/icons-material/Add';
+import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
+
 
 import ProjectCard from "./ProjectCard";
 
@@ -63,6 +65,10 @@ export default function Projects(props){
                     </img></a> 
                     Resume <br/>Builder 
             </header>
+
+            <HorizontalLabelPositionBelowStepper
+                pageNum={3}
+            />
 
             <h1 style={
                 {textAlign: 'left',

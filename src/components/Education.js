@@ -6,6 +6,8 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
+import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
+
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -43,6 +45,9 @@ export default function Education(props){
                     Resume <br/>Builder 
             </header>
 
+            <HorizontalLabelPositionBelowStepper 
+                pageNum={1}
+            />
 
             {/* Education title at the top of page */}
             <h1 style={

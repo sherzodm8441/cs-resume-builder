@@ -6,6 +6,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Logo from '../images/logo.png'
 import MouseOverPopover from "./MouseOverPopover";
 import { red } from "@mui/material/colors";
+import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
 
 /* Controls the width of the text input boxes */
 const nameTxtBox = {
@@ -47,7 +48,9 @@ export default function PersonalDetails(props){
                     Resume <br/>Builder 
             </header>
 
-            
+            <HorizontalLabelPositionBelowStepper 
+                pageNum={0}
+            />
 
             {/* "Personal Details" title at the top of page with CSS */}
             <h1  
@@ -126,7 +129,7 @@ export default function PersonalDetails(props){
                  marginBottom: "5px",
                  
                  }
-            }>Phone Number <span>*</span></h4>
+            }>Phone Number <span></span></h4>
             <TextField style = {txtBox}
                 
                 id="outlined-required"
@@ -135,7 +138,7 @@ export default function PersonalDetails(props){
                 name="phone"
                 value={props.values.phone}
                 onChange={(event) => props.updateValues(event)}
-                required={true}
+                // required={true}
             />
              <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "88px", marginLeft: "-88px"}} text={'ex. (333)333-3333'}/>
             <br/>
@@ -181,7 +184,7 @@ export default function PersonalDetails(props){
                 name="portfolioLink"
                 value={props.values.portfolioLink}
                 onChange={(event) => props.updateValues(event)}
-                required={true}
+                // required={true}
             />
             <br/>
             <br/>
