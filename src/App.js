@@ -33,24 +33,6 @@ React.useEffect(() => { // store values in localStorage
   localStorage.setItem('values', JSON.stringify(values))
 }, [values])
 
-// const [workExp, setWorkExp] = useState(JSON.parse(localStorage.getItem('workExps')) || { //holds values for Work Experience (# of workExp are fixed)
-//     workPlace1 : "",
-//     position1 : "",
-//     startEnd1 : "",
-//     responsibilities1 : "",
-//     workPlace2 : "",
-//     position2 : "",
-//     startEnd2 : "",
-//     responsibilities2 : "",
-//     workPlace3 : "",
-//     position3 : "",
-//     startEnd3 : "",
-//     responsibilities3 : ""
-// })
-
-// React.useEffect(() => { // store workExp in localStorage
-//   localStorage.setItem('workExp', JSON.stringify(workExp))
-// }, [workExp])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //this array contains the text inside the mouse popover. 
 const responsibilitiesTip = [<b>Points to consider:</b>, 
@@ -219,21 +201,6 @@ React.useEffect(() => { // store workExp in localStorage
 }, [projects])
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// const [projects, setProjects] = useState(JSON.parse(localStorage.getItem('projects')) || { //holds values for Projects (# of projects are fixed)
-//     title1 : "",
-//     link1 : "",
-//     description1 : "",
-//     title2 : "",
-//     link2 : "",
-//     description2 : "",
-//     title3 : "",
-//     link3 : "",
-//     description3 : ""
-// })
-
-// React.useEffect(() => { // store projects in localStorage, so the tasks persist after a refresh
-//   localStorage.setItem('projects', JSON.stringify(projects))
-// }, [projects])
 
 
 function updateValues(event){ //updates values for Education and Personal Details
@@ -243,20 +210,6 @@ function updateValues(event){ //updates values for Education and Personal Detail
         [event.target.name] : event.target.value
     })
 }
-
-// function updateWorkExp(event){ //updates values for work Experience
-//     setWorkExp({
-//         ...workExp, 
-//         [event.target.name] : event.target.value
-//     })
-// }
-
-// function updateProjects(event){ //updates values for Projects
-//     setProjects({
-//         ...projects, 
-//         [event.target.name] : event.target.value
-//     })
-// }
 
   const componentRef = useRef();
   const handleDownload = useReactToPrint({ //handle the function of the download button
@@ -307,10 +260,7 @@ function updateValues(event){ //updates values for Education and Personal Detail
       <div className="form">
         <Form 
           values={values}
-          // workExp={workExp}
-          // projects={projects}
           updateValues={updateValues}
-          // updateWorkExp={updateWorkExp}
           
           handleDownload={handleDownload}
           workExpsList={workExpsList}
