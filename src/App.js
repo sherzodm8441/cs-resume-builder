@@ -269,7 +269,15 @@ function updateValues(event){ //updates values for Education and Personal Detail
           projectsList={projectsList}
           addProjectCard={addProjectCard}
         />
-        <Button variant="outlined" color="error" onClick={() => restart()}>
+        <Button style={{
+           marginTop: "200px",
+           marginRight: "-140px",
+           float: "right",
+           backgroundColor: "#E0E0E0",
+           border: "1px solid #E0E0E0",
+
+        }} 
+        variant="outlined" color="error" onClick={() => restart()}>
             Restart
         </Button>
       </div>

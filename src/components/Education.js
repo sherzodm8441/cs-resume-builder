@@ -45,7 +45,7 @@ export default function Education(props){
                     Resume <br/>Builder 
             </header>
 
-            <HorizontalLabelPositionBelowStepper 
+            <HorizontalLabelPositionBelowStepper
                 pageNum={1}
             />
 
