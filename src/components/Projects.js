@@ -31,7 +31,7 @@ const bckBtn = {
 const downloadBtn = {
     backgroundColor: "#ff531a", 
     float: "right",
-    marginRight: "-350px",
+    // marginRight: "-350px",
     marginTop: "50px",
     marginBottom: "300px"
 }
@@ -71,20 +71,25 @@ export default function Projects(props){
                 onClick={() => props.addProjectCard()}
             >{<AddIcon />}ADD</Button>
 
-            <Button style = {bckBtn}
-                variant="outlined"
-                color="secondary"
-                startIcon={<ArrowLeftIcon />}
+
+            <div>
+                <Button style = {bckBtn}
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<ArrowLeftIcon />}
+                    
+                    onClick={() => props.lastStep()}
+                >Back</Button>
+
                 
-                onClick={() => props.lastStep()}
-            >Back</Button>
+                <Button style = {downloadBtn}
+                    variant="contained"
+                    endIcon={<DownloadIcon />}
+                    onClick={() => props.handleDownload()}
+                >Download</Button>
+            </div>
 
             
-            <Button style = {downloadBtn}
-                variant="contained"
-                endIcon={<DownloadIcon />}
-                onClick={() => props.handleDownload()}
-            >Download</Button>
         </React.Fragment>
 
     );

@@ -26,7 +26,7 @@ const descTxtBox = {
 const nxtBtn = { 
     backgroundColor: "#2db300", 
     float: "right",
-    marginRight: "-350px",
+    // marginRight: "-350px",
     marginTop: "50px",
     marginBottom: "300px"
 }
@@ -77,6 +77,7 @@ export default function WorkExperience(props){
                 onClick={() => props.addWorkExpCard()}
             >{<AddIcon />}ADD</Button>
 
+            <div className="workButtons">
             <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"
@@ -91,6 +92,9 @@ export default function WorkExperience(props){
 
                 onClick={() => props.nextStep()}
             >Next step</Button>
+            </div>
+
+            
         </React.Fragment>
 
     );

@@ -185,19 +185,22 @@ export default function Education(props){
             <br/>
 
 
-            <Button style = {bckBtn}
-                variant="outlined"
-                color="secondary"
-                startIcon={<ArrowLeftIcon />}
+            <div>
+                <Button style = {bckBtn}
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<ArrowLeftIcon />}
 
-                onClick={() => props.lastStep()}
-            >Back</Button>
-            <Button  style = {nxtBtn}
-                variant="contained"
-                endIcon={<ArrowRightIcon />}
-                
-                onClick={() => props.nextStep()}
-            >Next step</Button>
+                    onClick={() => props.lastStep()}
+                >Back</Button>
+                <Button  style = {nxtBtn}
+                    variant="contained"
+                    endIcon={<ArrowRightIcon />}
+                    
+                    onClick={() => props.nextStep()}
+                >Next step</Button>
+            </div>
+            
 
             
         </React.Fragment>
