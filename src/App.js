@@ -7,6 +7,7 @@ import WorkExpCard from "./components/WorkExpCard";
 import WorkExpResume from "./components/WorkExpResume";
 import ProjectCard from "./components/ProjectCard"
 import ProjectResume from "./components/ProjectResume";
+import { Button } from "@mui/material";
 
 
 function App() {
@@ -24,31 +25,14 @@ function App() {
     courses : "",
     graduation : "",
     degree : "",
-    major : ""
+    major : "",
+    phone : ""
 })
 
 React.useEffect(() => { // store values in localStorage
   localStorage.setItem('values', JSON.stringify(values))
 }, [values])
 
-// const [workExp, setWorkExp] = useState(JSON.parse(localStorage.getItem('workExps')) || { //holds values for Work Experience (# of workExp are fixed)
-//     workPlace1 : "",
-//     position1 : "",
-//     startEnd1 : "",
-//     responsibilities1 : "",
-//     workPlace2 : "",
-//     position2 : "",
-//     startEnd2 : "",
-//     responsibilities2 : "",
-//     workPlace3 : "",
-//     position3 : "",
-//     startEnd3 : "",
-//     responsibilities3 : ""
-// })
-
-// React.useEffect(() => { // store workExp in localStorage
-//   localStorage.setItem('workExp', JSON.stringify(workExp))
-// }, [workExp])
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //this array contains the text inside the mouse popover. 
 const responsibilitiesTip = [<b>Points to consider:</b>, 
@@ -217,21 +201,6 @@ React.useEffect(() => { // store workExp in localStorage
 }, [projects])
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// const [projects, setProjects] = useState(JSON.parse(localStorage.getItem('projects')) || { //holds values for Projects (# of projects are fixed)
-//     title1 : "",
-//     link1 : "",
-//     description1 : "",
-//     title2 : "",
-//     link2 : "",
-//     description2 : "",
-//     title3 : "",
-//     link3 : "",
-//     description3 : ""
-// })
-
-// React.useEffect(() => { // store projects in localStorage, so the tasks persist after a refresh
-//   localStorage.setItem('projects', JSON.stringify(projects))
-// }, [projects])
 
 
 function updateValues(event){ //updates values for Education and Personal Details
@@ -242,36 +211,56 @@ function updateValues(event){ //updates values for Education and Personal Detail
     })
 }
 
-// function updateWorkExp(event){ //updates values for work Experience
-//     setWorkExp({
-//         ...workExp, 
-//         [event.target.name] : event.target.value
-//     })
-// }
-
-// function updateProjects(event){ //updates values for Projects
-//     setProjects({
-//         ...projects, 
-//         [event.target.name] : event.target.value
-//     })
-// }
-
   const componentRef = useRef();
   const handleDownload = useReactToPrint({ //handle the function of the download button
     content: () => componentRef.current,
   });
 
-  
+  function restart(){
+    if(window.confirm("Do you want to start over? All values will be deleted.")){
+      console.log('cleared');
+      setProjects([
+        {
+          title: "",
+          link: "",
+          description: ""
+        }
+        ])
+
+        setWorkExps([
+          {
+            workPlace: "",
+            position: "",
+            startEnd: "",
+            responsibilities: ""
+          }
+        ])
+
+        setValues({ 
+          firstName: "",
+          lastName : "", 
+          email : "",
+          location : "",
+          portfolioLink : "",
+          schoolName : "",
+          schoolLocation : "",
+          courses : "",
+          graduation : "",
+          degree : "",
+          major : "",
+          phone : ""
+      })
+    }else{
+      console.log('canceled');
+    }
+  }
 
   return (
     <div className="App" style={{}}>
       <div className="form">
         <Form 
           values={values}
-          // workExp={workExp}
-          // projects={projects}
           updateValues={updateValues}
-          // updateWorkExp={updateWorkExp}
           
           handleDownload={handleDownload}
           workExpsList={workExpsList}
@@ -280,6 +269,17 @@ function updateValues(event){ //updates values for Education and Personal Detail
           projectsList={projectsList}
           addProjectCard={addProjectCard}
         />
+        <Button style={{
+           marginTop: "200px",
+           marginRight: "-140px",
+           float: "right",
+           backgroundColor: "#E0E0E0",
+           border: "1px solid #E0E0E0",
+
+        }} 
+        variant="outlined" color="error" onClick={() => restart()}>
+            Restart
+        </Button>
       </div>
       <div ref={componentRef} className="resume">
         <Resume 

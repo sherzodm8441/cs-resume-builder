@@ -6,6 +6,8 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
+import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
+
 
 /* Controls the width of the text input boxes */
 const txtBox = {
@@ -43,6 +45,9 @@ export default function Education(props){
                     Resume <br/>Builder 
             </header>
 
+            <HorizontalLabelPositionBelowStepper
+                pageNum={1}
+            />
 
             {/* Education title at the top of page */}
             <h1 style={
@@ -180,19 +185,22 @@ export default function Education(props){
             <br/>
 
 
-            <Button style = {bckBtn}
-                variant="outlined"
-                color="secondary"
-                startIcon={<ArrowLeftIcon />}
+            <div>
+                <Button style = {bckBtn}
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<ArrowLeftIcon />}
 
-                onClick={() => props.lastStep()}
-            >Back</Button>
-            <Button  style = {nxtBtn}
-                variant="contained"
-                endIcon={<ArrowRightIcon />}
-                
-                onClick={() => props.nextStep()}
-            >Next step</Button>
+                    onClick={() => props.lastStep()}
+                >Back</Button>
+                <Button  style = {nxtBtn}
+                    variant="contained"
+                    endIcon={<ArrowRightIcon />}
+                    
+                    onClick={() => props.nextStep()}
+                >Next step</Button>
+            </div>
+            
 
             
         </React.Fragment>

@@ -9,6 +9,8 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Logo from '../images/logo.png'
 import MouseOverPopover from './MouseOverPopover'
 import AddIcon from '@mui/icons-material/Add';
+import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
+
 
 
 /* Controls the width of the text input boxes */
@@ -24,7 +26,7 @@ const descTxtBox = {
 const nxtBtn = { 
     backgroundColor: "#2db300", 
     float: "right",
-    marginRight: "-350px",
+    // marginRight: "-350px",
     marginTop: "50px",
     marginBottom: "300px"
 }
@@ -39,16 +41,6 @@ const bckBtn = {
 
 
 export default function WorkExperience(props){
-    // //this array contains the text inside the mouse popover. 
-    // const responsibilitiesTip = [<b>Points to consider:</b>, 
-    // <br/>,  
-    // 'Growth: What did you add to the company?',
-    // <br/>,
-    // 'Frequency : How often did you complete tasks?',
-    // <br/>,
-    // 'Impact: How many people did your work help?',
-    // <br/>,
-    // 'Reduction: How did you create efficiency by helping reduce or save XX?']
 
     return(
         
@@ -63,6 +55,10 @@ export default function WorkExperience(props){
                     Resume <br/>Builder 
             </header>
 
+            <HorizontalLabelPositionBelowStepper 
+                pageNum={2}
+            />
+
             <h1 style={
                 {textAlign: 'left',
                 marginTop: "80px", 
@@ -75,251 +71,13 @@ export default function WorkExperience(props){
             {/* inputs */}
             {props.workExpsList} 
 
-            {/* <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Company Name <span>*</span>
-            </h4>   
-            <TextField style = {txtBox}
-                required //material UI provided specifications
-                id="outlined-required" //mui
-                label="Please enter the name of the company you worked for" //mui
-
-                name="workPlace1" //JSX specification (rest of the components follow the same pattern)
-                value={props.workExp.workPlace1} //JSX
-                onChange={(event) => props.updateWorkExp(event)} //JSX
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Job Title <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the name of the job title"
-
-                name="position1"
-                value={props.workExp.position1}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Start Date - End Date <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the start and end date of the job if applicable"
-
-                name="startEnd1"
-                value={props.workExp.startEnd1}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "110px", marginLeft: "-110px"}} text={"ex. MM/YYYY - MM/YYYY or Present"}/>
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Responsibilities <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter a description of your job responsibilities"
-                multiline
-
-                name="responsibilities1"
-                value={props.workExp.responsibilities1}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            <MouseOverPopover style={{width: "20px", float: 'right', marginRight: "110px", marginLeft: "-110px"}} text={responsibilitiesTip}/>
-            <br/>
-            <br/>
-
-            <WorkExpCard 
-                workPlace={props.workExp.workPlace1}
-                position={props.workExp.position1}
-                startEnd={props.workExp.startEnd1}
-                responsibilities={props.workExp.responsibilities1}
-                responsibilitiesTip={responsibilitiesTip}
-                updateWorkExp={props.updateWorkExp}
-            />
-
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                marginTop: "50px"
-                }
-                }>Company Name <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the name of the work place"
-
-                name="workPlace2"
-                value={props.workExp.workPlace2}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Job Title <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the name of the work position"
-
-                name="position2"
-                value={props.workExp.position2}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Start Date - End Date <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the start and end of the job if applicable"
-
-                name="startEnd2"
-                value={props.workExp.startEnd2}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Responsibilities <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter a description of your job responsibilities"
-                multiline
-
-                name="responsibilities2"
-                value={props.workExp.responsibilities2}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            <br/>
-            <br/>
-
-
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                marginTop: "50px"
-                }
-                }>Company Name <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the name of the work place"
-
-                name="workPlace3"
-                value={props.workExp.workPlace3}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Job Title <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the name of the work position"
-
-                name="position3"
-                value={props.workExp.position3}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Start Date - End Date <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter the start and end of the job if applicable"
-
-                name="startEnd3"
-                value={props.workExp.startEnd3}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            
-            <h4 
-            style={
-                {textAlign: 'left', 
-                marginLeft: "90px", 
-                marginBottom: "5px",
-                }
-                }>Responsibilities <span>*</span>
-            </h4>
-            <TextField style = {txtBox}
-                required
-                id="outlined-required"
-                label="Please enter a description of your job responsibilities"
-                multiline
-
-                name="responsibilities3"
-                value={props.workExp.responsibilities3}
-                onChange={(event) => props.updateWorkExp(event)}
-            />
-            <br/>
-            <br/> */}
-
             <Button style={{marginLeft: "50px", marginBottom: "100px", color: "white", backgroundColor: "#3333ff"}}
                 variant="contained"
 
                 onClick={() => props.addWorkExpCard()}
             >{<AddIcon />}ADD</Button>
 
+            <div className="workButtons">
             <Button style = {bckBtn}
                 variant="outlined"
                 color="secondary"
@@ -334,6 +92,9 @@ export default function WorkExperience(props){
 
                 onClick={() => props.nextStep()}
             >Next step</Button>
+            </div>
+
+            
         </React.Fragment>
 
     );

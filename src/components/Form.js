@@ -4,6 +4,7 @@ import PersonalDetails from "./PersonalDetails";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
+import { Button } from "@mui/material";
 
 export default function Form(props){
     const [step, setStep] = useState(parseInt(localStorage.getItem('step')) || 1);
@@ -24,11 +25,13 @@ export default function Form(props){
     switch(step){ //switch statement determines which page to go to
         case 1:
             return(
-                <PersonalDetails 
-                    nextStep = {nextStep}
-                    values={props.values}
-                    updateValues = {props.updateValues}
-                />
+                <div>
+                    <PersonalDetails 
+                        nextStep = {nextStep}
+                        values={props.values}
+                        updateValues = {props.updateValues}
+                    />
+                </div>
             );
         case 2:
             return(
